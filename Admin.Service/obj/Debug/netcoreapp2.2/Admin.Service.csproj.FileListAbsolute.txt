@@ -1,0 +1,16 @@
+D:\Sekolah\viscod\eraport\Admin\Admin.Service\bin\Debug\netcoreapp2.2\Admin.Service.deps.json
+D:\Sekolah\viscod\eraport\Admin\Admin.Service\bin\Debug\netcoreapp2.2\Admin.Service.dll
+D:\Sekolah\viscod\eraport\Admin\Admin.Service\obj\Debug\netcoreapp2.2\Admin.Service.csprojAssemblyReference.cache
+D:\Sekolah\viscod\eraport\Admin\Admin.Service\obj\Debug\netcoreapp2.2\Admin.Service.csproj.CoreCompileInputs.cache
+D:\Sekolah\viscod\eraport\Admin\Admin.Service\obj\Debug\netcoreapp2.2\Admin.Service.AssemblyInfoInputs.cache
+D:\Sekolah\viscod\eraport\Admin\Admin.Service\obj\Debug\netcoreapp2.2\Admin.Service.AssemblyInfo.cs
+D:\Sekolah\viscod\eraport\Admin\Admin.Service\bin\Debug\netcoreapp2.2\Admin.Service.pdb
+D:\Sekolah\viscod\eraport\Admin\Admin.Service\bin\Debug\netcoreapp2.2\Admin.Common.dll
+D:\Sekolah\viscod\eraport\Admin\Admin.Service\bin\Debug\netcoreapp2.2\Admin.Repository.dll
+D:\Sekolah\viscod\eraport\Admin\Admin.Service\bin\Debug\netcoreapp2.2\Admin.Repository.NHibernate.dll
+D:\Sekolah\viscod\eraport\Admin\Admin.Service\bin\Debug\netcoreapp2.2\Admin.Common.pdb
+D:\Sekolah\viscod\eraport\Admin\Admin.Service\bin\Debug\netcoreapp2.2\Admin.Repository.NHibernate.pdb
+D:\Sekolah\viscod\eraport\Admin\Admin.Service\bin\Debug\netcoreapp2.2\Admin.Repository.pdb
+D:\Sekolah\viscod\eraport\Admin\Admin.Service\obj\Debug\netcoreapp2.2\Admin.Service.csproj.CopyComplete
+D:\Sekolah\viscod\eraport\Admin\Admin.Service\obj\Debug\netcoreapp2.2\Admin.Service.dll
+D:\Sekolah\viscod\eraport\Admin\Admin.Service\obj\Debug\netcoreapp2.2\Admin.Service.pdb

@@ -1,0 +1,12 @@
+D:\Sekolah\viscod\eraport\Admin\Admin.Common\bin\Debug\netcoreapp2.2\Admin.Common.deps.json
+D:\Sekolah\viscod\eraport\Admin\Admin.Common\bin\Debug\netcoreapp2.2\Admin.Common.dll
+D:\Sekolah\viscod\eraport\Admin\Admin.Common\obj\Debug\netcoreapp2.2\Admin.Common.csproj.CoreCompileInputs.cache
+D:\Sekolah\viscod\eraport\Admin\Admin.Common\obj\Debug\netcoreapp2.2\Admin.Common.AssemblyInfoInputs.cache
+D:\Sekolah\viscod\eraport\Admin\Admin.Common\obj\Debug\netcoreapp2.2\Admin.Common.AssemblyInfo.cs
+D:\Sekolah\viscod\eraport\Admin\Admin.Common\bin\Debug\netcoreapp2.2\Admin.Common.pdb
+D:\Sekolah\viscod\eraport\Admin\Admin.Common\obj\Debug\netcoreapp2.2\Admin.Common.csprojAssemblyReference.cache
+D:\Sekolah\viscod\eraport\Admin\Admin.Common\obj\Debug\netcoreapp2.2\Admin.Common.dll
+D:\Sekolah\viscod\eraport\Admin\Admin.Common\obj\Debug\netcoreapp2.2\Admin.Common.pdb
+D:\Sekolah\viscod\eraport\Admin\Admin.Common\bin\Debug\netcoreapp2.2\Microsoft.AspNetCore.Authentication.dll
+D:\Sekolah\viscod\eraport\Admin\Admin.Common\bin\Debug\netcoreapp2.2\Microsoft.AspNetCore.Authentication.xml
+D:\Sekolah\viscod\eraport\Admin\Admin.Common\obj\Debug\netcoreapp2.2\Admin.Common.csproj.CopyComplete

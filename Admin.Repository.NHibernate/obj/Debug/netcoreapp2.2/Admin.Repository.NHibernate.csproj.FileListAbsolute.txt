@@ -1,0 +1,12 @@
+D:\Sekolah\viscod\eraport\Admin\Admin.Repository.NHibernate\bin\Debug\netcoreapp2.2\Admin.Repository.NHibernate.deps.json
+D:\Sekolah\viscod\eraport\Admin\Admin.Repository.NHibernate\bin\Debug\netcoreapp2.2\Admin.Repository.NHibernate.dll
+D:\Sekolah\viscod\eraport\Admin\Admin.Repository.NHibernate\obj\Debug\netcoreapp2.2\Admin.Repository.NHibernate.csprojAssemblyReference.cache
+D:\Sekolah\viscod\eraport\Admin\Admin.Repository.NHibernate\obj\Debug\netcoreapp2.2\Admin.Repository.NHibernate.csproj.CoreCompileInputs.cache
+D:\Sekolah\viscod\eraport\Admin\Admin.Repository.NHibernate\obj\Debug\netcoreapp2.2\Admin.Repository.NHibernate.AssemblyInfoInputs.cache
+D:\Sekolah\viscod\eraport\Admin\Admin.Repository.NHibernate\obj\Debug\netcoreapp2.2\Admin.Repository.NHibernate.AssemblyInfo.cs
+D:\Sekolah\viscod\eraport\Admin\Admin.Repository.NHibernate\bin\Debug\netcoreapp2.2\Admin.Repository.NHibernate.pdb
+D:\Sekolah\viscod\eraport\Admin\Admin.Repository.NHibernate\bin\Debug\netcoreapp2.2\Admin.Repository.dll
+D:\Sekolah\viscod\eraport\Admin\Admin.Repository.NHibernate\bin\Debug\netcoreapp2.2\Admin.Repository.pdb
+D:\Sekolah\viscod\eraport\Admin\Admin.Repository.NHibernate\obj\Debug\netcoreapp2.2\Admin.Repository.NHibernate.csproj.CopyComplete
+D:\Sekolah\viscod\eraport\Admin\Admin.Repository.NHibernate\obj\Debug\netcoreapp2.2\Admin.Repository.NHibernate.dll
+D:\Sekolah\viscod\eraport\Admin\Admin.Repository.NHibernate\obj\Debug\netcoreapp2.2\Admin.Repository.NHibernate.pdb

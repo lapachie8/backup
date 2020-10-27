@@ -1,0 +1,44 @@
+orm:
+  connection:
+    databaseType: MSSQL2012
+    connectionString: "Server=tcp:192.168.99.100,1433;Database=eraport;User ID=sa;Password=QBootcamp2020"
+  helper:
+    showSql: true
+    formatSql: true
+  build:
+    create: false
+    update: true
+    scriptPath: SqlScript
+    scriptFileName: build.sql
+  map:
+    assemblies:
+      - Admin.Repository.NHibernate
+#    classes:
+swagger:
+  generator:
+    doc: 
+      name: v1
+      info:
+        title: Admin
+        version: v1
+    describeAllEnumsAsStrings: true
+  route: 
+    template: 'api/docs/{documentName}/swagger.json'
+  ui:
+    prefix: api/docs
+    documentTitle: Admin
+    endpoint:
+      url: ./v1/swagger.json
+      name: Admin V1
+
+masstransit:
+  masstransitConfiguration:
+    baseUrl: rabbitmq://192.168.99.100:5672/Admin_vhost
+    username: user
+    password: password
+    endpoints:
+      - queueName: Admin-service
+        messageRetry:
+          retryCount: 1
+          retryInterval: 5000
+  messageBroker: RabbitMQ

@@ -1,0 +1,9 @@
+D:\Sekolah\viscod\eraport\Admin\Admin.Repository\bin\Debug\netcoreapp2.2\Admin.Repository.deps.json
+D:\Sekolah\viscod\eraport\Admin\Admin.Repository\bin\Debug\netcoreapp2.2\Admin.Repository.dll
+D:\Sekolah\viscod\eraport\Admin\Admin.Repository\obj\Debug\netcoreapp2.2\Admin.Repository.csprojAssemblyReference.cache
+D:\Sekolah\viscod\eraport\Admin\Admin.Repository\obj\Debug\netcoreapp2.2\Admin.Repository.csproj.CoreCompileInputs.cache
+D:\Sekolah\viscod\eraport\Admin\Admin.Repository\obj\Debug\netcoreapp2.2\Admin.Repository.AssemblyInfoInputs.cache
+D:\Sekolah\viscod\eraport\Admin\Admin.Repository\obj\Debug\netcoreapp2.2\Admin.Repository.AssemblyInfo.cs
+D:\Sekolah\viscod\eraport\Admin\Admin.Repository\bin\Debug\netcoreapp2.2\Admin.Repository.pdb
+D:\Sekolah\viscod\eraport\Admin\Admin.Repository\obj\Debug\netcoreapp2.2\Admin.Repository.dll
+D:\Sekolah\viscod\eraport\Admin\Admin.Repository\obj\Debug\netcoreapp2.2\Admin.Repository.pdb

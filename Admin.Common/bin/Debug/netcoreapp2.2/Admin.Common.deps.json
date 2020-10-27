@@ -1,0 +1,91 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v2.2",
+    "signature": "57871a7461413776e7e8224ee4671ba4b8f23f71"
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v2.2": {
+      "Admin.Common/1.0.0": {
+        "dependencies": {
+          "Teacher.Nilai.Repository": "1.1.2",
+          "Microsoft.AspNetCore.Authentication": "2.2.0.0"
+        },
+        "runtime": {
+          "Admin.Common.dll": {}
+        }
+      },
+      "QSI.Common/1.2.6": {
+        "runtime": {
+          "lib/netstandard2.0/QSI.Common.dll": {
+            "assemblyVersion": "1.2.6.0",
+            "fileVersion": "1.2.6.0"
+          }
+        }
+      },
+      "QSI.Persistence/1.5.3": {
+        "dependencies": {
+          "QSI.Common": "1.2.6"
+        },
+        "runtime": {
+          "lib/netstandard2.0/QSI.Persistence.dll": {
+            "assemblyVersion": "1.5.3.0",
+            "fileVersion": "1.5.3.0"
+          }
+        }
+      },
+      "Teacher.Nilai.Repository/1.1.2": {
+        "dependencies": {
+          "QSI.Persistence": "1.5.3"
+        },
+        "runtime": {
+          "lib/netcoreapp2.2/Teacher.Nilai.Repository.dll": {
+            "assemblyVersion": "1.1.2.0",
+            "fileVersion": "1.1.2.0"
+          }
+        }
+      },
+      "Microsoft.AspNetCore.Authentication/2.2.0.0": {
+        "runtime": {
+          "Microsoft.AspNetCore.Authentication.dll": {
+            "assemblyVersion": "2.2.0.0",
+            "fileVersion": "2.2.0.18316"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Admin.Common/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "QSI.Common/1.2.6": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-BqyROFoKTG7EIOEnUdtRefA+8prHyEf+79kEv1v8xdWde3tIiDOnEKo97MDnVvhRnqT26iPH77EBReTMwvtGFg==",
+      "path": "qsi.common/1.2.6",
+      "hashPath": "qsi.common.1.2.6.nupkg.sha512"
+    },
+    "QSI.Persistence/1.5.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-wKl6fLr4fT4h7tCt/+ofZxWHxKb2kGx9BB2MUlnJXg/HBQnKK4Sd9HPS+oYZZgiMOKckowuEb9E2CnwfGOh8Tw==",
+      "path": "qsi.persistence/1.5.3",
+      "hashPath": "qsi.persistence.1.5.3.nupkg.sha512"
+    },
+    "Teacher.Nilai.Repository/1.1.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-jfji65TzQ4vjdokunDCWQDLaSAZ6aQTN144+fSZz7hJimMqI7LGsGvJea4iOavJXbjqkul8xEoMWfpVhm9MLRg==",
+      "path": "teacher.nilai.repository/1.1.2",
+      "hashPath": "teacher.nilai.repository.1.1.2.nupkg.sha512"
+    },
+    "Microsoft.AspNetCore.Authentication/2.2.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

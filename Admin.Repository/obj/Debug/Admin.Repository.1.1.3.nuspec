@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>Admin.Repository</id>
+    <version>1.1.3</version>
+    <authors>Admin.Repository</authors>
+    <owners>Admin.Repository</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Package Description</description>
+    <dependencies>
+      <group targetFramework=".NETCoreApp2.2">
+        <dependency id="QSI.Persistence" version="1.5.3" exclude="Build,Analyzers" />
+        <dependency id="Teacher.Nilai.Repository" version="1.1.2" exclude="Build,Analyzers" />
+      </group>
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="D:\Sekolah\viscod\eraport\Admin\Admin.Repository\bin\Debug\netcoreapp2.2\Admin.Repository.dll" target="lib\netcoreapp2.2\Admin.Repository.dll" />
+  </files>
+</package>

@@ -1,0 +1,22 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Library</OutputType>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+    <ApplicationIcon />
+    <StartupObject />
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MassTransit" Version="5.3.2" />
+    <PackageReference Include="MassTransit.Extensions.DependencyInjection" Version="5.3.2" />
+    <PackageReference Include="MassTransit.RabbitMQ" Version="5.3.2" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Core" Version="2.2.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Admin.Common\Admin.Common.csproj" />
+    <ProjectReference Include="..\Admin.Service\Admin.Service.csproj" />
+  </ItemGroup>
+
+</Project>

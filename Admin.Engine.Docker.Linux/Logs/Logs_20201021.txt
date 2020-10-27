@@ -1,0 +1,195 @@
+INFO  21-10-2020 09:21:12 NHibernate.Cfg.Environment [1] - NHibernate 5.1.3 (assembly 5.1.0.0) 
+INFO  21-10-2020 09:21:12 NHibernate.Cfg.Environment [1] - hibernate-configuration section not found in application configuration file 
+INFO  21-10-2020 09:21:12 NHibernate.Cfg.Environment [1] - Bytecode provider name : lcg 
+INFO  21-10-2020 09:21:12 NHibernate.Cfg.Environment [1] - Using reflection optimizer 
+DEBUG 21-10-2020 09:21:13 NHibernate.Cfg.Configuration [1] - Mapping XML:
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"><class xmlns="urn:nhibernate-mapping-2.2" name="Admin.Repository.Models.StudentModel, Admin.Repository, Version=1.1.2.0, Culture=neutral, PublicKeyToken=null" table="student"><id name="Id" type="System.Int32, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e"><column name="Id" /><generator class="native" /></id><bag name="nilaiModels"><key foreign-key="student_id"><column name="student_id" /></key><one-to-many class="Teacher.Nilai.Repository.Models.TeacherNilaiModel, Teacher.Nilai.Repository, Version=1.1.2.0, Culture=neutral, PublicKeyToken=null" /></bag><property name="Timestamp" type="DateTime"><column name="timestamp" /></property><property name="Actor" type="System.String, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e"><column name="actor" /></property><property name="studentId" type="System.Int32, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e"><column name="studentId" not-null="true" /></property><property name="nisn" type="System.Int32, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e"><column name="nisn" not-null="true" /></property><property name="name" type="System.String, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e"><column name="name" not-null="true" /></property><property name="birthDate" type="System.String, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e"><column name="birthDate" not-null="true" /></property><property name="religion" type="System.String, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e"><column name="religion" not-null="true" /></property><property name="address" type="System.String, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e"><column name="address" not-null="true" /></property><property name="majors" type="System.String, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e"><column name="majors" not-null="true" /></property><property name="gender" type="System.String, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e"><column name="gender" not-null="true" /></property><property name="fatherName" type="System.String, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e"><column name="fatherName" not-null="true" /></property><property name="motherName" type="System.String, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e"><column name="motherName" not-null="true" /></property></class></hibernate-mapping> 
+INFO  21-10-2020 09:21:14 NHibernate.Dialect.Dialect [1] - Using dialect: NHibernate.Dialect.MsSql2012Dialect 
+INFO  21-10-2020 09:21:14 NHibernate.Cfg.XmlHbmBinding.Binder [1] - Mapping class: Admin.Repository.Models.StudentModel -> student 
+DEBUG 21-10-2020 09:21:14 NHibernate.Cfg.XmlHbmBinding.Binder [1] - Mapped property: Id -> Id, type: Int32 
+DEBUG 21-10-2020 09:21:14 NHibernate.Cfg.XmlHbmBinding.Binder [1] - Mapped property: nilaiModels, type: System.Collections.Generic.ICollection`1[[Teacher.Nilai.Repository.Models.TeacherNilaiModel, Teacher.Nilai.Repository, Version=1.1.2.0, Culture=neutral, PublicKeyToken=null]](Admin.Repository.Models.StudentModel.nilaiModels) 
+DEBUG 21-10-2020 09:21:14 NHibernate.Cfg.XmlHbmBinding.Binder [1] - Mapped property: Timestamp -> timestamp, type: DateTime 
+DEBUG 21-10-2020 09:21:14 NHibernate.Cfg.XmlHbmBinding.Binder [1] - Mapped property: Actor -> actor, type: String 
+DEBUG 21-10-2020 09:21:14 NHibernate.Cfg.XmlHbmBinding.Binder [1] - Mapped property: studentId -> studentId, type: Int32 
+DEBUG 21-10-2020 09:21:14 NHibernate.Cfg.XmlHbmBinding.Binder [1] - Mapped property: nisn -> nisn, type: Int32 
+DEBUG 21-10-2020 09:21:14 NHibernate.Cfg.XmlHbmBinding.Binder [1] - Mapped property: name -> name, type: String 
+DEBUG 21-10-2020 09:21:14 NHibernate.Cfg.XmlHbmBinding.Binder [1] - Mapped property: birthDate -> birthDate, type: String 
+DEBUG 21-10-2020 09:21:14 NHibernate.Cfg.XmlHbmBinding.Binder [1] - Mapped property: religion -> religion, type: String 
+DEBUG 21-10-2020 09:21:14 NHibernate.Cfg.XmlHbmBinding.Binder [1] - Mapped property: address -> address, type: String 
+DEBUG 21-10-2020 09:21:14 NHibernate.Cfg.XmlHbmBinding.Binder [1] - Mapped property: majors -> majors, type: String 
+DEBUG 21-10-2020 09:21:14 NHibernate.Cfg.XmlHbmBinding.Binder [1] - Mapped property: gender -> gender, type: String 
+DEBUG 21-10-2020 09:21:14 NHibernate.Cfg.XmlHbmBinding.Binder [1] - Mapped property: fatherName -> fatherName, type: String 
+DEBUG 21-10-2020 09:21:14 NHibernate.Cfg.XmlHbmBinding.Binder [1] - Mapped property: motherName -> motherName, type: String 
+DEBUG 21-10-2020 09:21:14 NHibernate.Cfg.Configuration [1] - Mapping XML:
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"><class xmlns="urn:nhibernate-mapping-2.2" name="Admin.Repository.Models.TeacherModel, Admin.Repository, Version=1.1.2.0, Culture=neutral, PublicKeyToken=null" table="teacher_data"><id name="Id" type="System.Int32, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e"><column name="Id" /><generator class="native" /></id><property name="Timestamp" type="DateTime"><column name="timestamp" /></property><property name="Actor" type="System.String, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e"><column name="actor" /></property><property name="name" type="System.String, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e"><column name="name" not-null="true" /></property><property name="birthDate" type="System.String, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e"><column name="birthDate" not-null="true" /></property><property name="address" type="System.String, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e"><column name="address" not-null="true" /></property><property name="lastAcad" type="System.String, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e"><column name="lastAcad" not-null="true" /></property><property name="isDeleted" type="System.Boolean, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e"><column name="isDeleted" not-null="true" /></property></class></hibernate-mapping> 
+INFO  21-10-2020 09:21:14 NHibernate.Dialect.Dialect [1] - Using dialect: NHibernate.Dialect.MsSql2012Dialect 
+INFO  21-10-2020 09:21:14 NHibernate.Cfg.XmlHbmBinding.Binder [1] - Mapping class: Admin.Repository.Models.TeacherModel -> teacher_data 
+DEBUG 21-10-2020 09:21:14 NHibernate.Cfg.XmlHbmBinding.Binder [1] - Mapped property: Id -> Id, type: Int32 
+DEBUG 21-10-2020 09:21:14 NHibernate.Cfg.XmlHbmBinding.Binder [1] - Mapped property: Timestamp -> timestamp, type: DateTime 
+DEBUG 21-10-2020 09:21:14 NHibernate.Cfg.XmlHbmBinding.Binder [1] - Mapped property: Actor -> actor, type: String 
+DEBUG 21-10-2020 09:21:14 NHibernate.Cfg.XmlHbmBinding.Binder [1] - Mapped property: name -> name, type: String 
+DEBUG 21-10-2020 09:21:14 NHibernate.Cfg.XmlHbmBinding.Binder [1] - Mapped property: birthDate -> birthDate, type: String 
+DEBUG 21-10-2020 09:21:14 NHibernate.Cfg.XmlHbmBinding.Binder [1] - Mapped property: address -> address, type: String 
+DEBUG 21-10-2020 09:21:14 NHibernate.Cfg.XmlHbmBinding.Binder [1] - Mapped property: lastAcad -> lastAcad, type: String 
+DEBUG 21-10-2020 09:21:14 NHibernate.Cfg.XmlHbmBinding.Binder [1] - Mapped property: isDeleted -> isDeleted, type: Boolean 
+INFO  21-10-2020 09:21:14 NHibernate.Dialect.Dialect [1] - Using dialect: NHibernate.Dialect.MsSql2012Dialect 
+INFO  21-10-2020 09:21:14 NHibernate.Tool.hbm2ddl.SchemaValidator [1] - Running schema validator 
+INFO  21-10-2020 09:21:14 NHibernate.Tool.hbm2ddl.SchemaValidator [1] - fetching database metadata 
+INFO  21-10-2020 09:21:14 NHibernate.Connection.ConnectionProviderFactory [1] - Initializing connection provider: NHibernate.Connection.DriverConnectionProvider 
+INFO  21-10-2020 09:21:14 NHibernate.Connection.ConnectionProvider [1] - Configuring ConnectionProvider 
+INFO  21-10-2020 09:21:14 NHibernate.Dialect.Dialect [1] - Using dialect: NHibernate.Dialect.MsSql2012Dialect 
+DEBUG 21-10-2020 09:21:14 NHibernate.Connection.DriverConnectionProvider [1] - Obtaining DbConnection from Driver 
+ERROR 21-10-2020 09:21:29 NHibernate.Tool.hbm2ddl.SchemaValidator [1] - could not get database metadata System.Data.SqlClient.SqlException (0x80131904): A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: TCP Provider, error: 0 - No connection could be made because the target machine actively refused it.) ---> System.ComponentModel.Win32Exception (10061): No connection could be made because the target machine actively refused it
+   at System.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, Boolean applyTransientFaultHandling, String accessToken)
+   at System.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at System.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at NHibernate.Connection.DriverConnectionProvider.GetConnection()
+   at NHibernate.Tool.hbm2ddl.ManagedProviderConnectionHelper.Prepare()
+   at NHibernate.Tool.hbm2ddl.SchemaValidator.Validate()
+ClientConnectionId:00000000-0000-0000-0000-000000000000
+Error Number:10061,State:0,Class:20
+
+ERROR 21-10-2020 09:21:29 NHibernate.Tool.hbm2ddl.SchemaValidator [1] - could not complete schema validation System.Data.SqlClient.SqlException (0x80131904): A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: TCP Provider, error: 0 - No connection could be made because the target machine actively refused it.) ---> System.ComponentModel.Win32Exception (10061): No connection could be made because the target machine actively refused it
+   at System.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, Boolean applyTransientFaultHandling, String accessToken)
+   at System.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at System.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at NHibernate.Connection.DriverConnectionProvider.GetConnection()
+   at NHibernate.Tool.hbm2ddl.ManagedProviderConnectionHelper.Prepare()
+   at NHibernate.Tool.hbm2ddl.SchemaValidator.Validate()
+ClientConnectionId:00000000-0000-0000-0000-000000000000
+Error Number:10061,State:0,Class:20
+
+INFO  21-10-2020 09:21:29 NHibernate.Dialect.Dialect [1] - Using dialect: NHibernate.Dialect.MsSql2012Dialect 
+INFO  21-10-2020 09:21:29 NHibernate.Cfg.Configuration [1] - checking mappings queue 
+INFO  21-10-2020 09:21:29 NHibernate.Cfg.Configuration [1] - processing one-to-many association mappings 
+DEBUG 21-10-2020 09:21:29 NHibernate.Cfg.XmlHbmBinding.Binder [1] - Second pass for collection: Admin.Repository.Models.StudentModel.nilaiModels 
+INFO  21-10-2020 13:25:03 NHibernate.Cfg.Environment [1] - NHibernate 5.1.3 (assembly 5.1.0.0) 
+INFO  21-10-2020 13:25:03 NHibernate.Cfg.Environment [1] - hibernate-configuration section not found in application configuration file 
+INFO  21-10-2020 13:25:03 NHibernate.Cfg.Environment [1] - Bytecode provider name : lcg 
+INFO  21-10-2020 13:25:03 NHibernate.Cfg.Environment [1] - Using reflection optimizer 
+DEBUG 21-10-2020 13:25:04 NHibernate.Cfg.Configuration [1] - Mapping XML:
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"><class xmlns="urn:nhibernate-mapping-2.2" name="Admin.Repository.Models.StudentModel, Admin.Repository, Version=1.1.2.0, Culture=neutral, PublicKeyToken=null" table="student"><id name="Id" type="System.Int32, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e"><column name="Id" /><generator class="native" /></id><bag name="nilaiModels"><key foreign-key="student_id"><column name="student_id" /></key><one-to-many class="Teacher.Nilai.Repository.Models.TeacherNilaiModel, Teacher.Nilai.Repository, Version=1.1.2.0, Culture=neutral, PublicKeyToken=null" /></bag><property name="Timestamp" type="DateTime"><column name="timestamp" /></property><property name="Actor" type="System.String, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e"><column name="actor" /></property><property name="studentId" type="System.Int32, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e"><column name="studentId" not-null="true" /></property><property name="nisn" type="System.Int32, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e"><column name="nisn" not-null="true" /></property><property name="name" type="System.String, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e"><column name="name" not-null="true" /></property><property name="birthDate" type="System.String, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e"><column name="birthDate" not-null="true" /></property><property name="religion" type="System.String, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e"><column name="religion" not-null="true" /></property><property name="address" type="System.String, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e"><column name="address" not-null="true" /></property><property name="majors" type="System.String, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e"><column name="majors" not-null="true" /></property><property name="gender" type="System.String, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e"><column name="gender" not-null="true" /></property><property name="fatherName" type="System.String, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e"><column name="fatherName" not-null="true" /></property><property name="motherName" type="System.String, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e"><column name="motherName" not-null="true" /></property></class></hibernate-mapping> 
+INFO  21-10-2020 13:25:04 NHibernate.Dialect.Dialect [1] - Using dialect: NHibernate.Dialect.MsSql2012Dialect 
+INFO  21-10-2020 13:25:05 NHibernate.Cfg.XmlHbmBinding.Binder [1] - Mapping class: Admin.Repository.Models.StudentModel -> student 
+DEBUG 21-10-2020 13:25:05 NHibernate.Cfg.XmlHbmBinding.Binder [1] - Mapped property: Id -> Id, type: Int32 
+DEBUG 21-10-2020 13:25:05 NHibernate.Cfg.XmlHbmBinding.Binder [1] - Mapped property: nilaiModels, type: System.Collections.Generic.ICollection`1[[Teacher.Nilai.Repository.Models.TeacherNilaiModel, Teacher.Nilai.Repository, Version=1.1.2.0, Culture=neutral, PublicKeyToken=null]](Admin.Repository.Models.StudentModel.nilaiModels) 
+DEBUG 21-10-2020 13:25:05 NHibernate.Cfg.XmlHbmBinding.Binder [1] - Mapped property: Timestamp -> timestamp, type: DateTime 
+DEBUG 21-10-2020 13:25:05 NHibernate.Cfg.XmlHbmBinding.Binder [1] - Mapped property: Actor -> actor, type: String 
+DEBUG 21-10-2020 13:25:05 NHibernate.Cfg.XmlHbmBinding.Binder [1] - Mapped property: studentId -> studentId, type: Int32 
+DEBUG 21-10-2020 13:25:05 NHibernate.Cfg.XmlHbmBinding.Binder [1] - Mapped property: nisn -> nisn, type: Int32 
+DEBUG 21-10-2020 13:25:05 NHibernate.Cfg.XmlHbmBinding.Binder [1] - Mapped property: name -> name, type: String 
+DEBUG 21-10-2020 13:25:05 NHibernate.Cfg.XmlHbmBinding.Binder [1] - Mapped property: birthDate -> birthDate, type: String 
+DEBUG 21-10-2020 13:25:05 NHibernate.Cfg.XmlHbmBinding.Binder [1] - Mapped property: religion -> religion, type: String 
+DEBUG 21-10-2020 13:25:05 NHibernate.Cfg.XmlHbmBinding.Binder [1] - Mapped property: address -> address, type: String 
+DEBUG 21-10-2020 13:25:05 NHibernate.Cfg.XmlHbmBinding.Binder [1] - Mapped property: majors -> majors, type: String 
+DEBUG 21-10-2020 13:25:05 NHibernate.Cfg.XmlHbmBinding.Binder [1] - Mapped property: gender -> gender, type: String 
+DEBUG 21-10-2020 13:25:05 NHibernate.Cfg.XmlHbmBinding.Binder [1] - Mapped property: fatherName -> fatherName, type: String 
+DEBUG 21-10-2020 13:25:05 NHibernate.Cfg.XmlHbmBinding.Binder [1] - Mapped property: motherName -> motherName, type: String 
+DEBUG 21-10-2020 13:25:05 NHibernate.Cfg.Configuration [1] - Mapping XML:
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"><class xmlns="urn:nhibernate-mapping-2.2" name="Admin.Repository.Models.TeacherModel, Admin.Repository, Version=1.1.2.0, Culture=neutral, PublicKeyToken=null" table="teacher_data"><id name="Id" type="System.Int32, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e"><column name="Id" /><generator class="native" /></id><property name="Timestamp" type="DateTime"><column name="timestamp" /></property><property name="Actor" type="System.String, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e"><column name="actor" /></property><property name="name" type="System.String, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e"><column name="name" not-null="true" /></property><property name="birthDate" type="System.String, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e"><column name="birthDate" not-null="true" /></property><property name="address" type="System.String, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e"><column name="address" not-null="true" /></property><property name="lastAcad" type="System.String, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e"><column name="lastAcad" not-null="true" /></property><property name="isDeleted" type="System.Boolean, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e"><column name="isDeleted" not-null="true" /></property></class></hibernate-mapping> 
+INFO  21-10-2020 13:25:05 NHibernate.Dialect.Dialect [1] - Using dialect: NHibernate.Dialect.MsSql2012Dialect 
+INFO  21-10-2020 13:25:05 NHibernate.Cfg.XmlHbmBinding.Binder [1] - Mapping class: Admin.Repository.Models.TeacherModel -> teacher_data 
+DEBUG 21-10-2020 13:25:05 NHibernate.Cfg.XmlHbmBinding.Binder [1] - Mapped property: Id -> Id, type: Int32 
+DEBUG 21-10-2020 13:25:05 NHibernate.Cfg.XmlHbmBinding.Binder [1] - Mapped property: Timestamp -> timestamp, type: DateTime 
+DEBUG 21-10-2020 13:25:05 NHibernate.Cfg.XmlHbmBinding.Binder [1] - Mapped property: Actor -> actor, type: String 
+DEBUG 21-10-2020 13:25:05 NHibernate.Cfg.XmlHbmBinding.Binder [1] - Mapped property: name -> name, type: String 
+DEBUG 21-10-2020 13:25:05 NHibernate.Cfg.XmlHbmBinding.Binder [1] - Mapped property: birthDate -> birthDate, type: String 
+DEBUG 21-10-2020 13:25:05 NHibernate.Cfg.XmlHbmBinding.Binder [1] - Mapped property: address -> address, type: String 
+DEBUG 21-10-2020 13:25:05 NHibernate.Cfg.XmlHbmBinding.Binder [1] - Mapped property: lastAcad -> lastAcad, type: String 
+DEBUG 21-10-2020 13:25:05 NHibernate.Cfg.XmlHbmBinding.Binder [1] - Mapped property: isDeleted -> isDeleted, type: Boolean 
+INFO  21-10-2020 13:25:05 NHibernate.Dialect.Dialect [1] - Using dialect: NHibernate.Dialect.MsSql2012Dialect 
+INFO  21-10-2020 13:25:05 NHibernate.Tool.hbm2ddl.SchemaValidator [1] - Running schema validator 
+INFO  21-10-2020 13:25:05 NHibernate.Tool.hbm2ddl.SchemaValidator [1] - fetching database metadata 
+INFO  21-10-2020 13:25:05 NHibernate.Connection.ConnectionProviderFactory [1] - Initializing connection provider: NHibernate.Connection.DriverConnectionProvider 
+INFO  21-10-2020 13:25:05 NHibernate.Connection.ConnectionProvider [1] - Configuring ConnectionProvider 
+INFO  21-10-2020 13:25:05 NHibernate.Dialect.Dialect [1] - Using dialect: NHibernate.Dialect.MsSql2012Dialect 
+DEBUG 21-10-2020 13:25:05 NHibernate.Connection.DriverConnectionProvider [1] - Obtaining DbConnection from Driver 
+INFO  21-10-2020 13:25:05 NHibernate.Cfg.Configuration [1] - checking mappings queue 
+INFO  21-10-2020 13:25:05 NHibernate.Cfg.Configuration [1] - processing one-to-many association mappings 
+DEBUG 21-10-2020 13:25:05 NHibernate.Cfg.XmlHbmBinding.Binder [1] - Second pass for collection: Admin.Repository.Models.StudentModel.nilaiModels 
+ERROR 21-10-2020 13:25:05 NHibernate.Tool.hbm2ddl.SchemaValidator [1] - could not complete schema validation NHibernate.MappingException: Association references unmapped class: Teacher.Nilai.Repository.Models.TeacherNilaiModel
+   at NHibernate.Cfg.XmlHbmBinding.CollectionBinder.BindCollectionSecondPass(ICollectionPropertiesMapping collectionMapping, Collection model, IDictionary`2 persistentClasses, IDictionary`2 inheritedMetas)
+   at NHibernate.Cfg.XmlHbmBinding.CollectionBinder.<>c__DisplayClass20_0.<AddCollectionSecondPass>b__0(IDictionary`2 persistentClasses)
+   at NHibernate.Cfg.Configuration.SecondPassCompile()
+   at NHibernate.Cfg.Configuration.ValidateSchema(Dialect dialect, IDatabaseMetadata databaseMetadata)
+   at NHibernate.Tool.hbm2ddl.SchemaValidator.Validate()
+
+DEBUG 21-10-2020 13:25:05 NHibernate.Connection.ConnectionProvider [1] - Closing connection 
+INFO  21-10-2020 13:25:05 NHibernate.Dialect.Dialect [1] - Using dialect: NHibernate.Dialect.MsSql2012Dialect 
+INFO  21-10-2020 13:25:05 NHibernate.Cfg.Configuration [1] - checking mappings queue 
+INFO  21-10-2020 13:25:05 NHibernate.Cfg.Configuration [1] - processing one-to-many association mappings 
+DEBUG 21-10-2020 13:25:05 NHibernate.Cfg.XmlHbmBinding.Binder [1] - Second pass for collection: Admin.Repository.Models.StudentModel.nilaiModels 
+INFO  21-10-2020 13:32:33 NHibernate.Cfg.Environment [1] - NHibernate 5.1.3 (assembly 5.1.0.0) 
+INFO  21-10-2020 13:32:33 NHibernate.Cfg.Environment [1] - hibernate-configuration section not found in application configuration file 
+INFO  21-10-2020 13:32:33 NHibernate.Cfg.Environment [1] - Bytecode provider name : lcg 
+INFO  21-10-2020 13:32:33 NHibernate.Cfg.Environment [1] - Using reflection optimizer 
+DEBUG 21-10-2020 13:32:33 NHibernate.Cfg.Configuration [1] - Mapping XML:
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"><class xmlns="urn:nhibernate-mapping-2.2" name="Admin.Repository.Models.StudentModel, Admin.Repository, Version=1.1.2.0, Culture=neutral, PublicKeyToken=null" table="student"><id name="Id" type="System.Int32, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e"><column name="Id" /><generator class="native" /></id><bag name="nilaiModels"><key foreign-key="student_id"><column name="student_id" /></key><one-to-many class="Teacher.Nilai.Repository.Models.TeacherNilaiModel, Teacher.Nilai.Repository, Version=1.1.2.0, Culture=neutral, PublicKeyToken=null" /></bag><property name="Timestamp" type="DateTime"><column name="timestamp" /></property><property name="Actor" type="System.String, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e"><column name="actor" /></property><property name="studentId" type="System.Int32, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e"><column name="studentId" not-null="true" /></property><property name="nisn" type="System.Int32, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e"><column name="nisn" not-null="true" /></property><property name="name" type="System.String, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e"><column name="name" not-null="true" /></property><property name="birthDate" type="System.String, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e"><column name="birthDate" not-null="true" /></property><property name="religion" type="System.String, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e"><column name="religion" not-null="true" /></property><property name="address" type="System.String, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e"><column name="address" not-null="true" /></property><property name="majors" type="System.String, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e"><column name="majors" not-null="true" /></property><property name="gender" type="System.String, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e"><column name="gender" not-null="true" /></property><property name="fatherName" type="System.String, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e"><column name="fatherName" not-null="true" /></property><property name="motherName" type="System.String, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e"><column name="motherName" not-null="true" /></property></class></hibernate-mapping> 
+INFO  21-10-2020 13:32:34 NHibernate.Dialect.Dialect [1] - Using dialect: NHibernate.Dialect.MsSql2012Dialect 
+INFO  21-10-2020 13:32:34 NHibernate.Cfg.XmlHbmBinding.Binder [1] - Mapping class: Admin.Repository.Models.StudentModel -> student 
+DEBUG 21-10-2020 13:32:34 NHibernate.Cfg.XmlHbmBinding.Binder [1] - Mapped property: Id -> Id, type: Int32 
+DEBUG 21-10-2020 13:32:34 NHibernate.Cfg.XmlHbmBinding.Binder [1] - Mapped property: nilaiModels, type: System.Collections.Generic.ICollection`1[[Teacher.Nilai.Repository.Models.TeacherNilaiModel, Teacher.Nilai.Repository, Version=1.1.2.0, Culture=neutral, PublicKeyToken=null]](Admin.Repository.Models.StudentModel.nilaiModels) 
+DEBUG 21-10-2020 13:32:34 NHibernate.Cfg.XmlHbmBinding.Binder [1] - Mapped property: Timestamp -> timestamp, type: DateTime 
+DEBUG 21-10-2020 13:32:34 NHibernate.Cfg.XmlHbmBinding.Binder [1] - Mapped property: Actor -> actor, type: String 
+DEBUG 21-10-2020 13:32:34 NHibernate.Cfg.XmlHbmBinding.Binder [1] - Mapped property: studentId -> studentId, type: Int32 
+DEBUG 21-10-2020 13:32:34 NHibernate.Cfg.XmlHbmBinding.Binder [1] - Mapped property: nisn -> nisn, type: Int32 
+DEBUG 21-10-2020 13:32:34 NHibernate.Cfg.XmlHbmBinding.Binder [1] - Mapped property: name -> name, type: String 
+DEBUG 21-10-2020 13:32:34 NHibernate.Cfg.XmlHbmBinding.Binder [1] - Mapped property: birthDate -> birthDate, type: String 
+DEBUG 21-10-2020 13:32:34 NHibernate.Cfg.XmlHbmBinding.Binder [1] - Mapped property: religion -> religion, type: String 
+DEBUG 21-10-2020 13:32:34 NHibernate.Cfg.XmlHbmBinding.Binder [1] - Mapped property: address -> address, type: String 
+DEBUG 21-10-2020 13:32:34 NHibernate.Cfg.XmlHbmBinding.Binder [1] - Mapped property: majors -> majors, type: String 
+DEBUG 21-10-2020 13:32:34 NHibernate.Cfg.XmlHbmBinding.Binder [1] - Mapped property: gender -> gender, type: String 
+DEBUG 21-10-2020 13:32:34 NHibernate.Cfg.XmlHbmBinding.Binder [1] - Mapped property: fatherName -> fatherName, type: String 
+DEBUG 21-10-2020 13:32:34 NHibernate.Cfg.XmlHbmBinding.Binder [1] - Mapped property: motherName -> motherName, type: String 
+DEBUG 21-10-2020 13:32:34 NHibernate.Cfg.Configuration [1] - Mapping XML:
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"><class xmlns="urn:nhibernate-mapping-2.2" name="Admin.Repository.Models.TeacherModel, Admin.Repository, Version=1.1.2.0, Culture=neutral, PublicKeyToken=null" table="teacher_data"><id name="Id" type="System.Int32, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e"><column name="Id" /><generator class="native" /></id><property name="Timestamp" type="DateTime"><column name="timestamp" /></property><property name="Actor" type="System.String, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e"><column name="actor" /></property><property name="name" type="System.String, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e"><column name="name" not-null="true" /></property><property name="birthDate" type="System.String, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e"><column name="birthDate" not-null="true" /></property><property name="address" type="System.String, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e"><column name="address" not-null="true" /></property><property name="lastAcad" type="System.String, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e"><column name="lastAcad" not-null="true" /></property><property name="isDeleted" type="System.Boolean, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e"><column name="isDeleted" not-null="true" /></property></class></hibernate-mapping> 
+INFO  21-10-2020 13:32:34 NHibernate.Dialect.Dialect [1] - Using dialect: NHibernate.Dialect.MsSql2012Dialect 
+INFO  21-10-2020 13:32:34 NHibernate.Cfg.XmlHbmBinding.Binder [1] - Mapping class: Admin.Repository.Models.TeacherModel -> teacher_data 
+DEBUG 21-10-2020 13:32:34 NHibernate.Cfg.XmlHbmBinding.Binder [1] - Mapped property: Id -> Id, type: Int32 
+DEBUG 21-10-2020 13:32:34 NHibernate.Cfg.XmlHbmBinding.Binder [1] - Mapped property: Timestamp -> timestamp, type: DateTime 
+DEBUG 21-10-2020 13:32:34 NHibernate.Cfg.XmlHbmBinding.Binder [1] - Mapped property: Actor -> actor, type: String 
+DEBUG 21-10-2020 13:32:34 NHibernate.Cfg.XmlHbmBinding.Binder [1] - Mapped property: name -> name, type: String 
+DEBUG 21-10-2020 13:32:34 NHibernate.Cfg.XmlHbmBinding.Binder [1] - Mapped property: birthDate -> birthDate, type: String 
+DEBUG 21-10-2020 13:32:34 NHibernate.Cfg.XmlHbmBinding.Binder [1] - Mapped property: address -> address, type: String 
+DEBUG 21-10-2020 13:32:34 NHibernate.Cfg.XmlHbmBinding.Binder [1] - Mapped property: lastAcad -> lastAcad, type: String 
+DEBUG 21-10-2020 13:32:34 NHibernate.Cfg.XmlHbmBinding.Binder [1] - Mapped property: isDeleted -> isDeleted, type: Boolean 
+INFO  21-10-2020 13:32:34 NHibernate.Dialect.Dialect [1] - Using dialect: NHibernate.Dialect.MsSql2012Dialect 
+INFO  21-10-2020 13:32:34 NHibernate.Tool.hbm2ddl.SchemaValidator [1] - Running schema validator 
+INFO  21-10-2020 13:32:34 NHibernate.Tool.hbm2ddl.SchemaValidator [1] - fetching database metadata 
+INFO  21-10-2020 13:32:34 NHibernate.Connection.ConnectionProviderFactory [1] - Initializing connection provider: NHibernate.Connection.DriverConnectionProvider 
+INFO  21-10-2020 13:32:34 NHibernate.Connection.ConnectionProvider [1] - Configuring ConnectionProvider 
+INFO  21-10-2020 13:32:34 NHibernate.Dialect.Dialect [1] - Using dialect: NHibernate.Dialect.MsSql2012Dialect 
+DEBUG 21-10-2020 13:32:34 NHibernate.Connection.DriverConnectionProvider [1] - Obtaining DbConnection from Driver 
+INFO  21-10-2020 13:32:34 NHibernate.Cfg.Configuration [1] - checking mappings queue 
+INFO  21-10-2020 13:32:34 NHibernate.Cfg.Configuration [1] - processing one-to-many association mappings 
+DEBUG 21-10-2020 13:32:34 NHibernate.Cfg.XmlHbmBinding.Binder [1] - Second pass for collection: Admin.Repository.Models.StudentModel.nilaiModels 
+ERROR 21-10-2020 13:32:34 NHibernate.Tool.hbm2ddl.SchemaValidator [1] - could not complete schema validation NHibernate.MappingException: Association references unmapped class: Teacher.Nilai.Repository.Models.TeacherNilaiModel
+   at NHibernate.Cfg.XmlHbmBinding.CollectionBinder.BindCollectionSecondPass(ICollectionPropertiesMapping collectionMapping, Collection model, IDictionary`2 persistentClasses, IDictionary`2 inheritedMetas)
+   at NHibernate.Cfg.XmlHbmBinding.CollectionBinder.<>c__DisplayClass20_0.<AddCollectionSecondPass>b__0(IDictionary`2 persistentClasses)
+   at NHibernate.Cfg.Configuration.SecondPassCompile()
+   at NHibernate.Cfg.Configuration.ValidateSchema(Dialect dialect, IDatabaseMetadata databaseMetadata)
+   at NHibernate.Tool.hbm2ddl.SchemaValidator.Validate()
+
+DEBUG 21-10-2020 13:32:34 NHibernate.Connection.ConnectionProvider [1] - Closing connection 
+INFO  21-10-2020 13:32:34 NHibernate.Dialect.Dialect [1] - Using dialect: NHibernate.Dialect.MsSql2012Dialect 
+INFO  21-10-2020 13:32:34 NHibernate.Cfg.Configuration [1] - checking mappings queue 
+INFO  21-10-2020 13:32:34 NHibernate.Cfg.Configuration [1] - processing one-to-many association mappings 
+DEBUG 21-10-2020 13:32:34 NHibernate.Cfg.XmlHbmBinding.Binder [1] - Second pass for collection: Admin.Repository.Models.StudentModel.nilaiModels 

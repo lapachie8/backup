@@ -1,0 +1,864 @@
+INFO  25-10-2020 20:13:53 NHibernate.Cfg.Environment [1] - NHibernate 5.1.3 (assembly 5.1.0.0) 
+INFO  25-10-2020 20:13:53 NHibernate.Cfg.Environment [1] - hibernate-configuration section not found in application configuration file 
+INFO  25-10-2020 20:13:53 NHibernate.Cfg.Environment [1] - Bytecode provider name : lcg 
+INFO  25-10-2020 20:13:53 NHibernate.Cfg.Environment [1] - Using reflection optimizer 
+DEBUG 25-10-2020 20:13:54 NHibernate.Cfg.Configuration [1] - Mapping XML:
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"><class xmlns="urn:nhibernate-mapping-2.2" name="Admin.Repository.Models.mapel, Admin.Repository, Version=1.2.0.0, Culture=neutral, PublicKeyToken=null" table="mapel"><id name="Id" type="System.Int32, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e"><column name="Id" /><generator class="native" /></id><property name="Timestamp" type="DateTime"><column name="timestamp" /></property><property name="Actor" type="System.String, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e"><column name="actor" /></property><property name="studentId" type="System.Int32, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e"><column name="studentId" not-null="true" /></property><property name="pai" type="System.Decimal, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e"><column name="pai" not-null="true" default="0" /></property><property name="ipa" type="System.Decimal, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e"><column name="ipa" not-null="true" default="0" /></property><property name="ips" type="System.Decimal, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e"><column name="ips" not-null="true" default="0" /></property><property name="mtk" type="System.Decimal, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e"><column name="mtk" not-null="true" default="0" /></property><property name="pkn" type="System.Decimal, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e"><column name="pkn" not-null="true" default="0" /></property><property name="bindo" type="System.Decimal, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e"><column name="bindo" not-null="true" default="0" /></property><property name="binggris" type="System.Decimal, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e"><column name="binggris" not-null="true" default="0" /></property><many-to-one class="Admin.Repository.Models.StudentModel, Admin.Repository, Version=1.2.0.0, Culture=neutral, PublicKeyToken=null" foreign-key="student_id" lazy="proxy" name="Model"><column name="student_id" not-null="true" /></many-to-one></class></hibernate-mapping> 
+INFO  25-10-2020 20:13:55 NHibernate.Dialect.Dialect [1] - Using dialect: NHibernate.Dialect.MsSql2012Dialect 
+INFO  25-10-2020 20:13:55 NHibernate.Cfg.XmlHbmBinding.Binder [1] - Mapping class: Admin.Repository.Models.mapel -> mapel 
+DEBUG 25-10-2020 20:13:55 NHibernate.Cfg.XmlHbmBinding.Binder [1] - Mapped property: Id -> Id, type: Int32 
+DEBUG 25-10-2020 20:13:55 NHibernate.Cfg.XmlHbmBinding.Binder [1] - Mapped property: Timestamp -> timestamp, type: DateTime 
+DEBUG 25-10-2020 20:13:55 NHibernate.Cfg.XmlHbmBinding.Binder [1] - Mapped property: Actor -> actor, type: String 
+DEBUG 25-10-2020 20:13:55 NHibernate.Cfg.XmlHbmBinding.Binder [1] - Mapped property: studentId -> studentId, type: Int32 
+DEBUG 25-10-2020 20:13:55 NHibernate.Cfg.XmlHbmBinding.Binder [1] - Mapped property: pai -> pai, type: Decimal 
+DEBUG 25-10-2020 20:13:55 NHibernate.Cfg.XmlHbmBinding.Binder [1] - Mapped property: ipa -> ipa, type: Decimal 
+DEBUG 25-10-2020 20:13:55 NHibernate.Cfg.XmlHbmBinding.Binder [1] - Mapped property: ips -> ips, type: Decimal 
+DEBUG 25-10-2020 20:13:55 NHibernate.Cfg.XmlHbmBinding.Binder [1] - Mapped property: mtk -> mtk, type: Decimal 
+DEBUG 25-10-2020 20:13:55 NHibernate.Cfg.XmlHbmBinding.Binder [1] - Mapped property: pkn -> pkn, type: Decimal 
+DEBUG 25-10-2020 20:13:55 NHibernate.Cfg.XmlHbmBinding.Binder [1] - Mapped property: bindo -> bindo, type: Decimal 
+DEBUG 25-10-2020 20:13:55 NHibernate.Cfg.XmlHbmBinding.Binder [1] - Mapped property: binggris -> binggris, type: Decimal 
+DEBUG 25-10-2020 20:13:55 NHibernate.Cfg.XmlHbmBinding.Binder [1] - Mapped property: Model -> student_id, type: Admin.Repository.Models.StudentModel 
+DEBUG 25-10-2020 20:13:55 NHibernate.Cfg.Configuration [1] - Mapping XML:
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"><class xmlns="urn:nhibernate-mapping-2.2" name="Admin.Repository.Models.StudentModel, Admin.Repository, Version=1.2.0.0, Culture=neutral, PublicKeyToken=null" table="student"><id name="Id" type="System.Int32, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e"><column name="Id" /><generator class="native" /></id><bag name="mapels"><key foreign-key="student_id"><column name="student_id" /></key><one-to-many class="Admin.Repository.Models.mapel, Admin.Repository, Version=1.2.0.0, Culture=neutral, PublicKeyToken=null" /></bag><property name="Timestamp" type="DateTime"><column name="timestamp" /></property><property name="Actor" type="System.String, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e"><column name="actor" /></property><property name="studentId" type="System.Int32, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e"><column name="studentId" not-null="true" /></property><property name="nisn" type="System.Int32, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e"><column name="nisn" not-null="true" /></property><property name="name" type="System.String, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e"><column name="name" not-null="true" /></property><property name="birthDate" type="System.String, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e"><column name="birthDate" not-null="true" /></property><property name="religion" type="System.String, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e"><column name="religion" not-null="true" /></property><property name="address" type="System.String, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e"><column name="address" not-null="true" /></property><property name="majors" type="System.String, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e"><column name="majors" not-null="true" /></property><property name="gender" type="System.String, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e"><column name="gender" not-null="true" /></property><property name="fatherName" type="System.String, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e"><column name="fatherName" not-null="true" /></property><property name="motherName" type="System.String, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e"><column name="motherName" not-null="true" /></property></class></hibernate-mapping> 
+INFO  25-10-2020 20:13:55 NHibernate.Dialect.Dialect [1] - Using dialect: NHibernate.Dialect.MsSql2012Dialect 
+INFO  25-10-2020 20:13:55 NHibernate.Cfg.XmlHbmBinding.Binder [1] - Mapping class: Admin.Repository.Models.StudentModel -> student 
+DEBUG 25-10-2020 20:13:55 NHibernate.Cfg.XmlHbmBinding.Binder [1] - Mapped property: Id -> Id, type: Int32 
+DEBUG 25-10-2020 20:13:55 NHibernate.Cfg.XmlHbmBinding.Binder [1] - Mapped property: mapels, type: System.Collections.Generic.ICollection`1[[Admin.Repository.Models.mapel, Admin.Repository, Version=1.2.0.0, Culture=neutral, PublicKeyToken=null]](Admin.Repository.Models.StudentModel.mapels) 
+DEBUG 25-10-2020 20:13:55 NHibernate.Cfg.XmlHbmBinding.Binder [1] - Mapped property: Timestamp -> timestamp, type: DateTime 
+DEBUG 25-10-2020 20:13:55 NHibernate.Cfg.XmlHbmBinding.Binder [1] - Mapped property: Actor -> actor, type: String 
+DEBUG 25-10-2020 20:13:55 NHibernate.Cfg.XmlHbmBinding.Binder [1] - Mapped property: studentId -> studentId, type: Int32 
+DEBUG 25-10-2020 20:13:55 NHibernate.Cfg.XmlHbmBinding.Binder [1] - Mapped property: nisn -> nisn, type: Int32 
+DEBUG 25-10-2020 20:13:55 NHibernate.Cfg.XmlHbmBinding.Binder [1] - Mapped property: name -> name, type: String 
+DEBUG 25-10-2020 20:13:55 NHibernate.Cfg.XmlHbmBinding.Binder [1] - Mapped property: birthDate -> birthDate, type: String 
+DEBUG 25-10-2020 20:13:55 NHibernate.Cfg.XmlHbmBinding.Binder [1] - Mapped property: religion -> religion, type: String 
+DEBUG 25-10-2020 20:13:55 NHibernate.Cfg.XmlHbmBinding.Binder [1] - Mapped property: address -> address, type: String 
+DEBUG 25-10-2020 20:13:55 NHibernate.Cfg.XmlHbmBinding.Binder [1] - Mapped property: majors -> majors, type: String 
+DEBUG 25-10-2020 20:13:55 NHibernate.Cfg.XmlHbmBinding.Binder [1] - Mapped property: gender -> gender, type: String 
+DEBUG 25-10-2020 20:13:55 NHibernate.Cfg.XmlHbmBinding.Binder [1] - Mapped property: fatherName -> fatherName, type: String 
+DEBUG 25-10-2020 20:13:55 NHibernate.Cfg.XmlHbmBinding.Binder [1] - Mapped property: motherName -> motherName, type: String 
+DEBUG 25-10-2020 20:13:55 NHibernate.Cfg.Configuration [1] - Mapping XML:
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"><class xmlns="urn:nhibernate-mapping-2.2" name="Admin.Repository.Models.TeacherModel, Admin.Repository, Version=1.2.0.0, Culture=neutral, PublicKeyToken=null" table="teacher"><id name="Id" type="System.Int32, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e"><column name="Id" /><generator class="native" /></id><property name="Timestamp" type="DateTime"><column name="timestamp" /></property><property name="Actor" type="System.String, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e"><column name="actor" /></property><property name="name" type="System.String, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e"><column name="name" not-null="true" /></property><property name="birthDate" type="System.String, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e"><column name="birthDate" not-null="true" /></property><property name="address" type="System.String, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e"><column name="address" not-null="true" /></property><property name="lastAcad" type="System.String, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e"><column name="lastAcad" not-null="true" /></property><property name="isDeleted" type="System.Boolean, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e"><column name="isDeleted" not-null="true" /></property></class></hibernate-mapping> 
+INFO  25-10-2020 20:13:55 NHibernate.Dialect.Dialect [1] - Using dialect: NHibernate.Dialect.MsSql2012Dialect 
+INFO  25-10-2020 20:13:55 NHibernate.Cfg.XmlHbmBinding.Binder [1] - Mapping class: Admin.Repository.Models.TeacherModel -> teacher 
+DEBUG 25-10-2020 20:13:55 NHibernate.Cfg.XmlHbmBinding.Binder [1] - Mapped property: Id -> Id, type: Int32 
+DEBUG 25-10-2020 20:13:55 NHibernate.Cfg.XmlHbmBinding.Binder [1] - Mapped property: Timestamp -> timestamp, type: DateTime 
+DEBUG 25-10-2020 20:13:55 NHibernate.Cfg.XmlHbmBinding.Binder [1] - Mapped property: Actor -> actor, type: String 
+DEBUG 25-10-2020 20:13:55 NHibernate.Cfg.XmlHbmBinding.Binder [1] - Mapped property: name -> name, type: String 
+DEBUG 25-10-2020 20:13:55 NHibernate.Cfg.XmlHbmBinding.Binder [1] - Mapped property: birthDate -> birthDate, type: String 
+DEBUG 25-10-2020 20:13:55 NHibernate.Cfg.XmlHbmBinding.Binder [1] - Mapped property: address -> address, type: String 
+DEBUG 25-10-2020 20:13:55 NHibernate.Cfg.XmlHbmBinding.Binder [1] - Mapped property: lastAcad -> lastAcad, type: String 
+DEBUG 25-10-2020 20:13:55 NHibernate.Cfg.XmlHbmBinding.Binder [1] - Mapped property: isDeleted -> isDeleted, type: Boolean 
+INFO  25-10-2020 20:13:55 NHibernate.Dialect.Dialect [1] - Using dialect: NHibernate.Dialect.MsSql2012Dialect 
+INFO  25-10-2020 20:13:55 NHibernate.Tool.hbm2ddl.SchemaValidator [1] - Running schema validator 
+INFO  25-10-2020 20:13:55 NHibernate.Tool.hbm2ddl.SchemaValidator [1] - fetching database metadata 
+INFO  25-10-2020 20:13:55 NHibernate.Connection.ConnectionProviderFactory [1] - Initializing connection provider: NHibernate.Connection.DriverConnectionProvider 
+INFO  25-10-2020 20:13:55 NHibernate.Connection.ConnectionProvider [1] - Configuring ConnectionProvider 
+INFO  25-10-2020 20:13:55 NHibernate.Dialect.Dialect [1] - Using dialect: NHibernate.Dialect.MsSql2012Dialect 
+DEBUG 25-10-2020 20:13:55 NHibernate.Connection.DriverConnectionProvider [1] - Obtaining DbConnection from Driver 
+INFO  25-10-2020 20:13:56 NHibernate.Cfg.Configuration [1] - checking mappings queue 
+INFO  25-10-2020 20:13:56 NHibernate.Cfg.Configuration [1] - processing one-to-many association mappings 
+DEBUG 25-10-2020 20:13:56 NHibernate.Cfg.XmlHbmBinding.Binder [1] - Second pass for collection: Admin.Repository.Models.StudentModel.mapels 
+INFO  25-10-2020 20:13:56 NHibernate.Cfg.XmlHbmBinding.Binder [1] - mapping collection: Admin.Repository.Models.StudentModel.mapels -> mapel 
+DEBUG 25-10-2020 20:13:56 NHibernate.Cfg.XmlHbmBinding.Binder [1] - Mapped collection key: student_id, one-to-many: Admin.Repository.Models.mapel 
+INFO  25-10-2020 20:13:56 NHibernate.Cfg.Configuration [1] - processing one-to-one association property references 
+INFO  25-10-2020 20:13:56 NHibernate.Cfg.Configuration [1] - processing foreign key constraints 
+DEBUG 25-10-2020 20:13:56 NHibernate.Cfg.Configuration [1] - resolving reference to class: Admin.Repository.Models.StudentModel 
+INFO  25-10-2020 20:13:56 NHibernate.Cfg.Configuration [1] - processing filters (second pass) 
+INFO  25-10-2020 20:13:56 NHibernate.Dialect.Schema.ITableMetadata [1] - table found: eraport.dbo.mapel 
+INFO  25-10-2020 20:13:56 NHibernate.Dialect.Schema.ITableMetadata [1] - columns: studentId, pai, ipa, ips, mtk, pkn, bindo, binggris, student_id, Id, timestamp, actor 
+INFO  25-10-2020 20:13:56 NHibernate.Dialect.Dialect [1] - Using dialect: NHibernate.Dialect.MsSql2012Dialect 
+INFO  25-10-2020 20:13:56 NHibernate.Dialect.Dialect [1] - Using dialect: NHibernate.Dialect.MsSql2012Dialect 
+INFO  25-10-2020 20:13:56 NHibernate.Dialect.Dialect [1] - Using dialect: NHibernate.Dialect.MsSql2012Dialect 
+INFO  25-10-2020 20:13:56 NHibernate.Dialect.Dialect [1] - Using dialect: NHibernate.Dialect.MsSql2012Dialect 
+INFO  25-10-2020 20:13:56 NHibernate.Dialect.Dialect [1] - Using dialect: NHibernate.Dialect.MsSql2012Dialect 
+INFO  25-10-2020 20:13:56 NHibernate.Dialect.Dialect [1] - Using dialect: NHibernate.Dialect.MsSql2012Dialect 
+INFO  25-10-2020 20:13:56 NHibernate.Dialect.Dialect [1] - Using dialect: NHibernate.Dialect.MsSql2012Dialect 
+INFO  25-10-2020 20:13:56 NHibernate.Dialect.Dialect [1] - Using dialect: NHibernate.Dialect.MsSql2012Dialect 
+INFO  25-10-2020 20:13:56 NHibernate.Dialect.Dialect [1] - Using dialect: NHibernate.Dialect.MsSql2012Dialect 
+INFO  25-10-2020 20:13:56 NHibernate.Dialect.Dialect [1] - Using dialect: NHibernate.Dialect.MsSql2012Dialect 
+INFO  25-10-2020 20:13:56 NHibernate.Dialect.Dialect [1] - Using dialect: NHibernate.Dialect.MsSql2012Dialect 
+INFO  25-10-2020 20:13:56 NHibernate.Dialect.Dialect [1] - Using dialect: NHibernate.Dialect.MsSql2012Dialect 
+INFO  25-10-2020 20:13:56 NHibernate.Dialect.Schema.ITableMetadata [1] - table found: eraport.dbo.student 
+INFO  25-10-2020 20:13:56 NHibernate.Dialect.Schema.ITableMetadata [1] - columns: studentId, nisn, name, birthDate, religion, address, majors, gender, fatherName, motherName, Id, timestamp, actor 
+INFO  25-10-2020 20:13:56 NHibernate.Dialect.Dialect [1] - Using dialect: NHibernate.Dialect.MsSql2012Dialect 
+INFO  25-10-2020 20:13:56 NHibernate.Dialect.Dialect [1] - Using dialect: NHibernate.Dialect.MsSql2012Dialect 
+INFO  25-10-2020 20:13:56 NHibernate.Dialect.Dialect [1] - Using dialect: NHibernate.Dialect.MsSql2012Dialect 
+INFO  25-10-2020 20:13:56 NHibernate.Dialect.Dialect [1] - Using dialect: NHibernate.Dialect.MsSql2012Dialect 
+INFO  25-10-2020 20:13:56 NHibernate.Dialect.Dialect [1] - Using dialect: NHibernate.Dialect.MsSql2012Dialect 
+INFO  25-10-2020 20:13:56 NHibernate.Dialect.Dialect [1] - Using dialect: NHibernate.Dialect.MsSql2012Dialect 
+INFO  25-10-2020 20:13:56 NHibernate.Dialect.Dialect [1] - Using dialect: NHibernate.Dialect.MsSql2012Dialect 
+INFO  25-10-2020 20:13:56 NHibernate.Dialect.Dialect [1] - Using dialect: NHibernate.Dialect.MsSql2012Dialect 
+INFO  25-10-2020 20:13:56 NHibernate.Dialect.Dialect [1] - Using dialect: NHibernate.Dialect.MsSql2012Dialect 
+INFO  25-10-2020 20:13:56 NHibernate.Dialect.Dialect [1] - Using dialect: NHibernate.Dialect.MsSql2012Dialect 
+INFO  25-10-2020 20:13:56 NHibernate.Dialect.Dialect [1] - Using dialect: NHibernate.Dialect.MsSql2012Dialect 
+INFO  25-10-2020 20:13:56 NHibernate.Dialect.Dialect [1] - Using dialect: NHibernate.Dialect.MsSql2012Dialect 
+INFO  25-10-2020 20:13:56 NHibernate.Dialect.Dialect [1] - Using dialect: NHibernate.Dialect.MsSql2012Dialect 
+INFO  25-10-2020 20:13:56 NHibernate.Dialect.Schema.ITableMetadata [1] - table found: eraport.dbo.teacher 
+INFO  25-10-2020 20:13:56 NHibernate.Dialect.Schema.ITableMetadata [1] - columns: name, birthDate, address, lastAcad, isDeleted, Id, timestamp, actor 
+INFO  25-10-2020 20:13:56 NHibernate.Dialect.Dialect [1] - Using dialect: NHibernate.Dialect.MsSql2012Dialect 
+INFO  25-10-2020 20:13:56 NHibernate.Dialect.Dialect [1] - Using dialect: NHibernate.Dialect.MsSql2012Dialect 
+INFO  25-10-2020 20:13:56 NHibernate.Dialect.Dialect [1] - Using dialect: NHibernate.Dialect.MsSql2012Dialect 
+INFO  25-10-2020 20:13:56 NHibernate.Dialect.Dialect [1] - Using dialect: NHibernate.Dialect.MsSql2012Dialect 
+INFO  25-10-2020 20:13:56 NHibernate.Dialect.Dialect [1] - Using dialect: NHibernate.Dialect.MsSql2012Dialect 
+INFO  25-10-2020 20:13:56 NHibernate.Dialect.Dialect [1] - Using dialect: NHibernate.Dialect.MsSql2012Dialect 
+INFO  25-10-2020 20:13:56 NHibernate.Dialect.Dialect [1] - Using dialect: NHibernate.Dialect.MsSql2012Dialect 
+INFO  25-10-2020 20:13:56 NHibernate.Dialect.Dialect [1] - Using dialect: NHibernate.Dialect.MsSql2012Dialect 
+DEBUG 25-10-2020 20:13:56 NHibernate.Connection.ConnectionProvider [1] - Closing connection 
+INFO  25-10-2020 20:13:56 NHibernate.Dialect.Dialect [1] - Using dialect: NHibernate.Dialect.MsSql2012Dialect 
+INFO  25-10-2020 20:13:56 NHibernate.Tool.hbm2ddl.SchemaUpdate [1] - Running hbm2ddl schema update 
+INFO  25-10-2020 20:13:56 NHibernate.Tool.hbm2ddl.SchemaUpdate [1] - fetching database metadata 
+INFO  25-10-2020 20:13:56 NHibernate.Connection.ConnectionProviderFactory [1] - Initializing connection provider: NHibernate.Connection.DriverConnectionProvider 
+INFO  25-10-2020 20:13:56 NHibernate.Connection.ConnectionProvider [1] - Configuring ConnectionProvider 
+INFO  25-10-2020 20:13:56 NHibernate.Dialect.Dialect [1] - Using dialect: NHibernate.Dialect.MsSql2012Dialect 
+DEBUG 25-10-2020 20:13:56 NHibernate.Connection.DriverConnectionProvider [1] - Obtaining DbConnection from Driver 
+INFO  25-10-2020 20:13:56 NHibernate.Tool.hbm2ddl.SchemaUpdate [1] - updating schema 
+INFO  25-10-2020 20:13:56 NHibernate.Cfg.Configuration [1] - checking mappings queue 
+INFO  25-10-2020 20:13:56 NHibernate.Cfg.Configuration [1] - processing one-to-many association mappings 
+INFO  25-10-2020 20:13:56 NHibernate.Cfg.Configuration [1] - processing one-to-one association property references 
+INFO  25-10-2020 20:13:56 NHibernate.Cfg.Configuration [1] - processing foreign key constraints 
+DEBUG 25-10-2020 20:13:56 NHibernate.Cfg.Configuration [1] - resolving reference to class: Admin.Repository.Models.StudentModel 
+INFO  25-10-2020 20:13:56 NHibernate.Cfg.Configuration [1] - processing filters (second pass) 
+INFO  25-10-2020 20:13:56 NHibernate.Dialect.Schema.ITableMetadata [1] - table found: eraport.dbo.mapel 
+INFO  25-10-2020 20:13:56 NHibernate.Dialect.Schema.ITableMetadata [1] - columns: studentId, pai, ipa, ips, mtk, pkn, bindo, binggris, student_id, Id, timestamp, actor 
+INFO  25-10-2020 20:13:56 NHibernate.Dialect.Schema.ITableMetadata [1] - foreign keys: student_id 
+INFO  25-10-2020 20:13:56 NHibernate.Dialect.Schema.ITableMetadata [1] - indexes: PK__mapel__3214EC07648B8922 
+INFO  25-10-2020 20:13:56 NHibernate.Dialect.Schema.ITableMetadata [1] - table found: eraport.dbo.student 
+INFO  25-10-2020 20:13:56 NHibernate.Dialect.Schema.ITableMetadata [1] - columns: studentId, nisn, name, birthDate, religion, address, majors, gender, fatherName, motherName, Id, timestamp, actor 
+INFO  25-10-2020 20:13:56 NHibernate.Dialect.Schema.ITableMetadata [1] - foreign keys:  
+INFO  25-10-2020 20:13:56 NHibernate.Dialect.Schema.ITableMetadata [1] - indexes: PK__student__3214EC0796BE13EC 
+INFO  25-10-2020 20:13:56 NHibernate.Dialect.Schema.ITableMetadata [1] - table found: eraport.dbo.teacher 
+INFO  25-10-2020 20:13:56 NHibernate.Dialect.Schema.ITableMetadata [1] - columns: name, birthDate, address, lastAcad, isDeleted, Id, timestamp, actor 
+INFO  25-10-2020 20:13:56 NHibernate.Dialect.Schema.ITableMetadata [1] - foreign keys:  
+INFO  25-10-2020 20:13:56 NHibernate.Dialect.Schema.ITableMetadata [1] - indexes: PK__teacher__3214EC07C80DF4A4 
+INFO  25-10-2020 20:13:56 NHibernate.Tool.hbm2ddl.SchemaUpdate [1] - schema update complete 
+DEBUG 25-10-2020 20:13:56 NHibernate.Connection.ConnectionProvider [1] - Closing connection 
+INFO  25-10-2020 20:13:56 NHibernate.Cfg.Configuration [1] - checking mappings queue 
+INFO  25-10-2020 20:13:56 NHibernate.Cfg.Configuration [1] - processing one-to-many association mappings 
+INFO  25-10-2020 20:13:56 NHibernate.Cfg.Configuration [1] - processing one-to-one association property references 
+INFO  25-10-2020 20:13:56 NHibernate.Cfg.Configuration [1] - processing foreign key constraints 
+DEBUG 25-10-2020 20:13:56 NHibernate.Cfg.Configuration [1] - resolving reference to class: Admin.Repository.Models.StudentModel 
+INFO  25-10-2020 20:13:56 NHibernate.Cfg.Configuration [1] - processing filters (second pass) 
+INFO  25-10-2020 20:13:56 NHibernate.Dialect.Dialect [1] - Using dialect: NHibernate.Dialect.MsSql2012Dialect 
+INFO  25-10-2020 20:13:56 NHibernate.Dialect.Dialect [1] - Using dialect: NHibernate.Dialect.MsSql2012Dialect 
+INFO  25-10-2020 20:13:57 NHibernate.Exceptions.SQLExceptionConverterFactory [1] - Using dialect defined converter 
+INFO  25-10-2020 20:13:57 NHibernate.Cfg.SettingsFactory [1] - Generate SQL with comments: disabled 
+INFO  25-10-2020 20:13:57 NHibernate.Connection.ConnectionProviderFactory [1] - Initializing connection provider: NHibernate.Connection.DriverConnectionProvider 
+INFO  25-10-2020 20:13:57 NHibernate.Connection.ConnectionProvider [1] - Configuring ConnectionProvider 
+INFO  25-10-2020 20:13:57 NHibernate.Dialect.Dialect [1] - Using dialect: NHibernate.Dialect.MsSql2012Dialect 
+INFO  25-10-2020 20:13:57 NHibernate.Cfg.SettingsFactory [1] - Transaction factory: NHibernate.Transaction.AdoNetWithSystemTransactionFactory 
+INFO  25-10-2020 20:13:57 NHibernate.Cfg.SettingsFactory [1] - Optimize cache for minimal puts: False 
+INFO  25-10-2020 20:13:57 NHibernate.Cfg.SettingsFactory [1] - Connection release mode: auto 
+INFO  25-10-2020 20:13:57 NHibernate.Cfg.SettingsFactory [1] - Default batch fetch size: 1 
+INFO  25-10-2020 20:13:57 NHibernate.Cfg.SettingsFactory [1] - echoing all SQL to stdout 
+INFO  25-10-2020 20:13:57 NHibernate.Cfg.SettingsFactory [1] - Statistics: disabled 
+INFO  25-10-2020 20:13:57 NHibernate.Cfg.SettingsFactory [1] - Deleted entity synthetic identifier rollback: disabled 
+INFO  25-10-2020 20:13:57 NHibernate.Cfg.SettingsFactory [1] - Query translator: NHibernate.Hql.Ast.ANTLR.ASTQueryTranslatorFactory 
+INFO  25-10-2020 20:13:57 NHibernate.Cfg.SettingsFactory [1] - Query provider: NHibernate.Linq.DefaultQueryProvider 
+INFO  25-10-2020 20:13:57 NHibernate.Cfg.SettingsFactory [1] - Query language substitutions: {'true'='1', 'false'='0', 'yes'=''Y'', 'no'=''N''} 
+INFO  25-10-2020 20:13:57 NHibernate.Cfg.SettingsFactory [1] - cache provider: NHibernate.Cache.NoCacheProvider, NHibernate, Version=5.1.0.0, Culture=neutral, PublicKeyToken=aa95f207798dfdb4 
+INFO  25-10-2020 20:13:57 NHibernate.Cfg.SettingsFactory [1] - Order SQL inserts for batching: enabled 
+INFO  25-10-2020 20:13:57 NHibernate.Cfg.SettingsFactory [1] - Order SQL updates for batching: disabled 
+DEBUG 25-10-2020 20:13:57 NHibernate.Cfg.SettingsFactory [1] - Wrap result sets: disabled 
+DEBUG 25-10-2020 20:13:57 NHibernate.Cfg.SettingsFactory [1] - Batch versioned data: disabled 
+INFO  25-10-2020 20:13:57 NHibernate.Cfg.SettingsFactory [1] - Batcher factory: NHibernate.AdoNet.GenericBatchingBatcherFactory, NHibernate, Version=5.1.0.0, Culture=neutral, PublicKeyToken=aa95f207798dfdb4 
+INFO  25-10-2020 20:13:57 NHibernate.Cfg.SettingsFactory [1] - Default flush mode: Auto 
+INFO  25-10-2020 20:13:57 NHibernate.Cfg.SettingsFactory [1] - Named query checking : enabled 
+DEBUG 25-10-2020 20:13:57 NHibernate.Cfg.SettingsFactory [1] - Track session id: enabled 
+INFO  25-10-2020 20:13:57 NHibernate.Impl.SessionFactoryImpl [1] - building session factory 
+DEBUG 25-10-2020 20:13:57 NHibernate.Impl.SessionFactoryImpl [1] - Session factory constructed with filter configurations : {} 
+DEBUG 25-10-2020 20:13:57 NHibernate.Impl.SessionFactoryImpl [1] - instantiating session factory with properties: {'use_reflection_optimizer'='True', 'connection.provider'='NHibernate.Connection.DriverConnectionProvider', 'connection.driver_class'='NHibernate.Driver.Sql2008ClientDriver, NHibernate, Version=5.1.0.0, Culture=neutral, PublicKeyToken=aa95f207798dfdb4', 'dialect'='NHibernate.Dialect.MsSql2012Dialect, NHibernate, Version=5.1.0.0, Culture=neutral, PublicKeyToken=aa95f207798dfdb4', 'hibernate.dialect'='NHibernate.Dialect.MsSql2012Dialect, NHibernate, Version=5.1.0.0, Culture=neutral, PublicKeyToken=aa95f207798dfdb4', 'show_sql'='true', 'format_sql'='true', 'connection.connection_string'='Server=tcp:192.168.99.100,1433;Database=eraport;User ID=sa;Password=QBootcamp2020'} 
+DEBUG 25-10-2020 20:13:57 NHibernate.Connection.DriverConnectionProvider [1] - Obtaining DbConnection from Driver 
+DEBUG 25-10-2020 20:13:59 NHibernate.Connection.ConnectionProvider [1] - Closing connection 
+INFO  25-10-2020 20:13:59 NHibernate.Dialect.Dialect [1] - Using dialect: NHibernate.Dialect.MsSql2012Dialect 
+DEBUG 25-10-2020 20:13:59 NHibernate.Tuple.Entity.AbstractEntityTuplizer [1] - No custom accessors found for entity: Admin.Repository.Models.mapel 
+DEBUG 25-10-2020 20:13:59 NHibernate.Tuple.Entity.PocoEntityTuplizer [1] - Create Instantiator using optimizer for:Admin.Repository.Models.mapel 
+INFO  25-10-2020 20:13:59 NHibernate.Dialect.Dialect [1] - Using dialect: NHibernate.Dialect.MsSql2012Dialect 
+DEBUG 25-10-2020 20:13:59 NHibernate.Tuple.Entity.AbstractEntityTuplizer [1] - No custom accessors found for entity: Admin.Repository.Models.StudentModel 
+DEBUG 25-10-2020 20:13:59 NHibernate.Tuple.Entity.PocoEntityTuplizer [1] - Create Instantiator using optimizer for:Admin.Repository.Models.StudentModel 
+INFO  25-10-2020 20:13:59 NHibernate.Dialect.Dialect [1] - Using dialect: NHibernate.Dialect.MsSql2012Dialect 
+DEBUG 25-10-2020 20:13:59 NHibernate.Tuple.Entity.AbstractEntityTuplizer [1] - No custom accessors found for entity: Admin.Repository.Models.TeacherModel 
+DEBUG 25-10-2020 20:13:59 NHibernate.Tuple.Entity.PocoEntityTuplizer [1] - Create Instantiator using optimizer for:Admin.Repository.Models.TeacherModel 
+DEBUG 25-10-2020 20:13:59 NHibernate.Persister.Collection.ICollectionPersister [1] - Static SQL for collection: Admin.Repository.Models.StudentModel.mapels 
+DEBUG 25-10-2020 20:13:59 NHibernate.Persister.Collection.ICollectionPersister [1] -  Row insert: UPDATE mapel SET student_id = ? WHERE Id = ? 
+DEBUG 25-10-2020 20:13:59 NHibernate.Persister.Collection.ICollectionPersister [1] -  Row delete: UPDATE mapel SET student_id = null WHERE student_id = ? AND Id = ? 
+DEBUG 25-10-2020 20:13:59 NHibernate.Persister.Collection.ICollectionPersister [1] -  One-shot delete: UPDATE mapel SET student_id = null WHERE student_id = ? 
+DEBUG 25-10-2020 20:13:59 NHibernate.Persister.Entity.AbstractEntityPersister [1] - Static SQL for entity: Admin.Repository.Models.mapel 
+DEBUG 25-10-2020 20:13:59 NHibernate.Persister.Entity.AbstractEntityPersister [1] -  Version select: SELECT Id FROM mapel WHERE Id = ? 
+DEBUG 25-10-2020 20:13:59 NHibernate.Persister.Entity.AbstractEntityPersister [1] -  Snapshot select: SELECT mapel_.Id, mapel_.timestamp as timestamp2_0_, mapel_.actor as actor3_0_, mapel_.studentId as studentid4_0_, mapel_.pai as pai5_0_, mapel_.ipa as ipa6_0_, mapel_.ips as ips7_0_, mapel_.mtk as mtk8_0_, mapel_.pkn as pkn9_0_, mapel_.bindo as bindo10_0_, mapel_.binggris as binggris11_0_, mapel_.student_id as student12_0_ FROM mapel mapel_ WHERE mapel_.Id=? 
+DEBUG 25-10-2020 20:13:59 NHibernate.Persister.Entity.AbstractEntityPersister [1] -  Insert 0: INSERT INTO mapel (timestamp, actor, studentId, pai, ipa, ips, mtk, pkn, bindo, binggris, student_id, Id) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
+DEBUG 25-10-2020 20:13:59 NHibernate.Persister.Entity.AbstractEntityPersister [1] -  Update 0: UPDATE mapel SET timestamp = ?, actor = ?, studentId = ?, pai = ?, ipa = ?, ips = ?, mtk = ?, pkn = ?, bindo = ?, binggris = ?, student_id = ? WHERE Id = ? 
+DEBUG 25-10-2020 20:13:59 NHibernate.Persister.Entity.AbstractEntityPersister [1] -  Delete 0: DELETE FROM mapel WHERE Id = ? 
+DEBUG 25-10-2020 20:13:59 NHibernate.Persister.Entity.AbstractEntityPersister [1] -  Identity insert: INSERT INTO mapel (timestamp, actor, studentId, pai, ipa, ips, mtk, pkn, bindo, binggris, student_id) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?); select SCOPE_IDENTITY() 
+DEBUG 25-10-2020 20:13:59 NHibernate.Loader.Entity.AbstractEntityLoader [1] - Static select for entity Admin.Repository.Models.mapel: SELECT mapel0_.Id as id1_0_0_, mapel0_.timestamp as timestamp2_0_0_, mapel0_.actor as actor3_0_0_, mapel0_.studentId as studentid4_0_0_, mapel0_.pai as pai5_0_0_, mapel0_.ipa as ipa6_0_0_, mapel0_.ips as ips7_0_0_, mapel0_.mtk as mtk8_0_0_, mapel0_.pkn as pkn9_0_0_, mapel0_.bindo as bindo10_0_0_, mapel0_.binggris as binggris11_0_0_, mapel0_.student_id as student12_0_0_ FROM mapel mapel0_ WHERE mapel0_.Id=? 
+DEBUG 25-10-2020 20:13:59 NHibernate.Loader.Entity.AbstractEntityLoader [1] - Static select for entity Admin.Repository.Models.mapel: SELECT mapel0_.Id as id1_0_0_, mapel0_.timestamp as timestamp2_0_0_, mapel0_.actor as actor3_0_0_, mapel0_.studentId as studentid4_0_0_, mapel0_.pai as pai5_0_0_, mapel0_.ipa as ipa6_0_0_, mapel0_.ips as ips7_0_0_, mapel0_.mtk as mtk8_0_0_, mapel0_.pkn as pkn9_0_0_, mapel0_.bindo as bindo10_0_0_, mapel0_.binggris as binggris11_0_0_, mapel0_.student_id as student12_0_0_ FROM mapel mapel0_ WHERE mapel0_.Id=? 
+DEBUG 25-10-2020 20:13:59 NHibernate.Loader.Entity.AbstractEntityLoader [1] - Static select for entity Admin.Repository.Models.mapel: SELECT mapel0_.Id as id1_0_0_, mapel0_.timestamp as timestamp2_0_0_, mapel0_.actor as actor3_0_0_, mapel0_.studentId as studentid4_0_0_, mapel0_.pai as pai5_0_0_, mapel0_.ipa as ipa6_0_0_, mapel0_.ips as ips7_0_0_, mapel0_.mtk as mtk8_0_0_, mapel0_.pkn as pkn9_0_0_, mapel0_.bindo as bindo10_0_0_, mapel0_.binggris as binggris11_0_0_, mapel0_.student_id as student12_0_0_ FROM mapel mapel0_ with (updlock, rowlock) WHERE mapel0_.Id=? 
+DEBUG 25-10-2020 20:13:59 NHibernate.Loader.Entity.AbstractEntityLoader [1] - Static select for entity Admin.Repository.Models.mapel: SELECT mapel0_.Id as id1_0_0_, mapel0_.timestamp as timestamp2_0_0_, mapel0_.actor as actor3_0_0_, mapel0_.studentId as studentid4_0_0_, mapel0_.pai as pai5_0_0_, mapel0_.ipa as ipa6_0_0_, mapel0_.ips as ips7_0_0_, mapel0_.mtk as mtk8_0_0_, mapel0_.pkn as pkn9_0_0_, mapel0_.bindo as bindo10_0_0_, mapel0_.binggris as binggris11_0_0_, mapel0_.student_id as student12_0_0_ FROM mapel mapel0_ with (updlock, rowlock, nowait) WHERE mapel0_.Id=? 
+DEBUG 25-10-2020 20:13:59 NHibernate.Loader.Entity.AbstractEntityLoader [1] - Static select for entity Admin.Repository.Models.mapel: SELECT mapel0_.Id as id1_0_0_, mapel0_.timestamp as timestamp2_0_0_, mapel0_.actor as actor3_0_0_, mapel0_.studentId as studentid4_0_0_, mapel0_.pai as pai5_0_0_, mapel0_.ipa as ipa6_0_0_, mapel0_.ips as ips7_0_0_, mapel0_.mtk as mtk8_0_0_, mapel0_.pkn as pkn9_0_0_, mapel0_.bindo as bindo10_0_0_, mapel0_.binggris as binggris11_0_0_, mapel0_.student_id as student12_0_0_ FROM mapel mapel0_ with (updlock, rowlock) WHERE mapel0_.Id=? 
+DEBUG 25-10-2020 20:13:59 NHibernate.Loader.Entity.AbstractEntityLoader [1] - Static select for action NHibernate.Engine.CascadingAction+MergeCascadingAction on entity Admin.Repository.Models.mapel: SELECT mapel0_.Id as id1_0_0_, mapel0_.timestamp as timestamp2_0_0_, mapel0_.actor as actor3_0_0_, mapel0_.studentId as studentid4_0_0_, mapel0_.pai as pai5_0_0_, mapel0_.ipa as ipa6_0_0_, mapel0_.ips as ips7_0_0_, mapel0_.mtk as mtk8_0_0_, mapel0_.pkn as pkn9_0_0_, mapel0_.bindo as bindo10_0_0_, mapel0_.binggris as binggris11_0_0_, mapel0_.student_id as student12_0_0_ FROM mapel mapel0_ WHERE mapel0_.Id=? 
+DEBUG 25-10-2020 20:13:59 NHibernate.Loader.Entity.AbstractEntityLoader [1] - Static select for action NHibernate.Engine.CascadingAction+RefreshCascadingAction on entity Admin.Repository.Models.mapel: SELECT mapel0_.Id as id1_0_0_, mapel0_.timestamp as timestamp2_0_0_, mapel0_.actor as actor3_0_0_, mapel0_.studentId as studentid4_0_0_, mapel0_.pai as pai5_0_0_, mapel0_.ipa as ipa6_0_0_, mapel0_.ips as ips7_0_0_, mapel0_.mtk as mtk8_0_0_, mapel0_.pkn as pkn9_0_0_, mapel0_.bindo as bindo10_0_0_, mapel0_.binggris as binggris11_0_0_, mapel0_.student_id as student12_0_0_ FROM mapel mapel0_ WHERE mapel0_.Id=? 
+DEBUG 25-10-2020 20:13:59 NHibernate.Persister.Entity.AbstractEntityPersister [1] - Static SQL for entity: Admin.Repository.Models.StudentModel 
+DEBUG 25-10-2020 20:13:59 NHibernate.Persister.Entity.AbstractEntityPersister [1] -  Version select: SELECT Id FROM student WHERE Id = ? 
+DEBUG 25-10-2020 20:13:59 NHibernate.Persister.Entity.AbstractEntityPersister [1] -  Snapshot select: SELECT studentmod_.Id, studentmod_.timestamp as timestamp2_1_, studentmod_.actor as actor3_1_, studentmod_.studentId as studentid4_1_, studentmod_.nisn as nisn5_1_, studentmod_.name as name6_1_, studentmod_.birthDate as birthdate7_1_, studentmod_.religion as religion8_1_, studentmod_.address as address9_1_, studentmod_.majors as majors10_1_, studentmod_.gender as gender11_1_, studentmod_.fatherName as fathername12_1_, studentmod_.motherName as mothername13_1_ FROM student studentmod_ WHERE studentmod_.Id=? 
+DEBUG 25-10-2020 20:13:59 NHibernate.Persister.Entity.AbstractEntityPersister [1] -  Insert 0: INSERT INTO student (timestamp, actor, studentId, nisn, name, birthDate, religion, address, majors, gender, fatherName, motherName, Id) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
+DEBUG 25-10-2020 20:13:59 NHibernate.Persister.Entity.AbstractEntityPersister [1] -  Update 0: UPDATE student SET timestamp = ?, actor = ?, studentId = ?, nisn = ?, name = ?, birthDate = ?, religion = ?, address = ?, majors = ?, gender = ?, fatherName = ?, motherName = ? WHERE Id = ? 
+DEBUG 25-10-2020 20:13:59 NHibernate.Persister.Entity.AbstractEntityPersister [1] -  Delete 0: DELETE FROM student WHERE Id = ? 
+DEBUG 25-10-2020 20:13:59 NHibernate.Persister.Entity.AbstractEntityPersister [1] -  Identity insert: INSERT INTO student (timestamp, actor, studentId, nisn, name, birthDate, religion, address, majors, gender, fatherName, motherName) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?); select SCOPE_IDENTITY() 
+DEBUG 25-10-2020 20:13:59 NHibernate.Loader.Entity.AbstractEntityLoader [1] - Static select for entity Admin.Repository.Models.StudentModel: SELECT studentmod0_.Id as id1_1_0_, studentmod0_.timestamp as timestamp2_1_0_, studentmod0_.actor as actor3_1_0_, studentmod0_.studentId as studentid4_1_0_, studentmod0_.nisn as nisn5_1_0_, studentmod0_.name as name6_1_0_, studentmod0_.birthDate as birthdate7_1_0_, studentmod0_.religion as religion8_1_0_, studentmod0_.address as address9_1_0_, studentmod0_.majors as majors10_1_0_, studentmod0_.gender as gender11_1_0_, studentmod0_.fatherName as fathername12_1_0_, studentmod0_.motherName as mothername13_1_0_ FROM student studentmod0_ WHERE studentmod0_.Id=? 
+DEBUG 25-10-2020 20:13:59 NHibernate.Loader.Entity.AbstractEntityLoader [1] - Static select for entity Admin.Repository.Models.StudentModel: SELECT studentmod0_.Id as id1_1_0_, studentmod0_.timestamp as timestamp2_1_0_, studentmod0_.actor as actor3_1_0_, studentmod0_.studentId as studentid4_1_0_, studentmod0_.nisn as nisn5_1_0_, studentmod0_.name as name6_1_0_, studentmod0_.birthDate as birthdate7_1_0_, studentmod0_.religion as religion8_1_0_, studentmod0_.address as address9_1_0_, studentmod0_.majors as majors10_1_0_, studentmod0_.gender as gender11_1_0_, studentmod0_.fatherName as fathername12_1_0_, studentmod0_.motherName as mothername13_1_0_ FROM student studentmod0_ WHERE studentmod0_.Id=? 
+DEBUG 25-10-2020 20:13:59 NHibernate.Loader.Entity.AbstractEntityLoader [1] - Static select for entity Admin.Repository.Models.StudentModel: SELECT studentmod0_.Id as id1_1_0_, studentmod0_.timestamp as timestamp2_1_0_, studentmod0_.actor as actor3_1_0_, studentmod0_.studentId as studentid4_1_0_, studentmod0_.nisn as nisn5_1_0_, studentmod0_.name as name6_1_0_, studentmod0_.birthDate as birthdate7_1_0_, studentmod0_.religion as religion8_1_0_, studentmod0_.address as address9_1_0_, studentmod0_.majors as majors10_1_0_, studentmod0_.gender as gender11_1_0_, studentmod0_.fatherName as fathername12_1_0_, studentmod0_.motherName as mothername13_1_0_ FROM student studentmod0_ with (updlock, rowlock) WHERE studentmod0_.Id=? 
+DEBUG 25-10-2020 20:13:59 NHibernate.Loader.Entity.AbstractEntityLoader [1] - Static select for entity Admin.Repository.Models.StudentModel: SELECT studentmod0_.Id as id1_1_0_, studentmod0_.timestamp as timestamp2_1_0_, studentmod0_.actor as actor3_1_0_, studentmod0_.studentId as studentid4_1_0_, studentmod0_.nisn as nisn5_1_0_, studentmod0_.name as name6_1_0_, studentmod0_.birthDate as birthdate7_1_0_, studentmod0_.religion as religion8_1_0_, studentmod0_.address as address9_1_0_, studentmod0_.majors as majors10_1_0_, studentmod0_.gender as gender11_1_0_, studentmod0_.fatherName as fathername12_1_0_, studentmod0_.motherName as mothername13_1_0_ FROM student studentmod0_ with (updlock, rowlock, nowait) WHERE studentmod0_.Id=? 
+DEBUG 25-10-2020 20:13:59 NHibernate.Loader.Entity.AbstractEntityLoader [1] - Static select for entity Admin.Repository.Models.StudentModel: SELECT studentmod0_.Id as id1_1_0_, studentmod0_.timestamp as timestamp2_1_0_, studentmod0_.actor as actor3_1_0_, studentmod0_.studentId as studentid4_1_0_, studentmod0_.nisn as nisn5_1_0_, studentmod0_.name as name6_1_0_, studentmod0_.birthDate as birthdate7_1_0_, studentmod0_.religion as religion8_1_0_, studentmod0_.address as address9_1_0_, studentmod0_.majors as majors10_1_0_, studentmod0_.gender as gender11_1_0_, studentmod0_.fatherName as fathername12_1_0_, studentmod0_.motherName as mothername13_1_0_ FROM student studentmod0_ with (updlock, rowlock) WHERE studentmod0_.Id=? 
+DEBUG 25-10-2020 20:13:59 NHibernate.Loader.Entity.AbstractEntityLoader [1] - Static select for action NHibernate.Engine.CascadingAction+MergeCascadingAction on entity Admin.Repository.Models.StudentModel: SELECT studentmod0_.Id as id1_1_0_, studentmod0_.timestamp as timestamp2_1_0_, studentmod0_.actor as actor3_1_0_, studentmod0_.studentId as studentid4_1_0_, studentmod0_.nisn as nisn5_1_0_, studentmod0_.name as name6_1_0_, studentmod0_.birthDate as birthdate7_1_0_, studentmod0_.religion as religion8_1_0_, studentmod0_.address as address9_1_0_, studentmod0_.majors as majors10_1_0_, studentmod0_.gender as gender11_1_0_, studentmod0_.fatherName as fathername12_1_0_, studentmod0_.motherName as mothername13_1_0_ FROM student studentmod0_ WHERE studentmod0_.Id=? 
+DEBUG 25-10-2020 20:13:59 NHibernate.Loader.Entity.AbstractEntityLoader [1] - Static select for action NHibernate.Engine.CascadingAction+RefreshCascadingAction on entity Admin.Repository.Models.StudentModel: SELECT studentmod0_.Id as id1_1_0_, studentmod0_.timestamp as timestamp2_1_0_, studentmod0_.actor as actor3_1_0_, studentmod0_.studentId as studentid4_1_0_, studentmod0_.nisn as nisn5_1_0_, studentmod0_.name as name6_1_0_, studentmod0_.birthDate as birthdate7_1_0_, studentmod0_.religion as religion8_1_0_, studentmod0_.address as address9_1_0_, studentmod0_.majors as majors10_1_0_, studentmod0_.gender as gender11_1_0_, studentmod0_.fatherName as fathername12_1_0_, studentmod0_.motherName as mothername13_1_0_ FROM student studentmod0_ WHERE studentmod0_.Id=? 
+DEBUG 25-10-2020 20:13:59 NHibernate.Persister.Entity.AbstractEntityPersister [1] - Static SQL for entity: Admin.Repository.Models.TeacherModel 
+DEBUG 25-10-2020 20:13:59 NHibernate.Persister.Entity.AbstractEntityPersister [1] -  Version select: SELECT Id FROM teacher WHERE Id = ? 
+DEBUG 25-10-2020 20:13:59 NHibernate.Persister.Entity.AbstractEntityPersister [1] -  Snapshot select: SELECT teachermod_.Id, teachermod_.timestamp as timestamp2_2_, teachermod_.actor as actor3_2_, teachermod_.name as name4_2_, teachermod_.birthDate as birthdate5_2_, teachermod_.address as address6_2_, teachermod_.lastAcad as lastacad7_2_, teachermod_.isDeleted as isdeleted8_2_ FROM teacher teachermod_ WHERE teachermod_.Id=? 
+DEBUG 25-10-2020 20:13:59 NHibernate.Persister.Entity.AbstractEntityPersister [1] -  Insert 0: INSERT INTO teacher (timestamp, actor, name, birthDate, address, lastAcad, isDeleted, Id) VALUES (?, ?, ?, ?, ?, ?, ?, ?) 
+DEBUG 25-10-2020 20:13:59 NHibernate.Persister.Entity.AbstractEntityPersister [1] -  Update 0: UPDATE teacher SET timestamp = ?, actor = ?, name = ?, birthDate = ?, address = ?, lastAcad = ?, isDeleted = ? WHERE Id = ? 
+DEBUG 25-10-2020 20:13:59 NHibernate.Persister.Entity.AbstractEntityPersister [1] -  Delete 0: DELETE FROM teacher WHERE Id = ? 
+DEBUG 25-10-2020 20:13:59 NHibernate.Persister.Entity.AbstractEntityPersister [1] -  Identity insert: INSERT INTO teacher (timestamp, actor, name, birthDate, address, lastAcad, isDeleted) VALUES (?, ?, ?, ?, ?, ?, ?); select SCOPE_IDENTITY() 
+DEBUG 25-10-2020 20:13:59 NHibernate.Loader.Entity.AbstractEntityLoader [1] - Static select for entity Admin.Repository.Models.TeacherModel: SELECT teachermod0_.Id as id1_2_0_, teachermod0_.timestamp as timestamp2_2_0_, teachermod0_.actor as actor3_2_0_, teachermod0_.name as name4_2_0_, teachermod0_.birthDate as birthdate5_2_0_, teachermod0_.address as address6_2_0_, teachermod0_.lastAcad as lastacad7_2_0_, teachermod0_.isDeleted as isdeleted8_2_0_ FROM teacher teachermod0_ WHERE teachermod0_.Id=? 
+DEBUG 25-10-2020 20:13:59 NHibernate.Loader.Entity.AbstractEntityLoader [1] - Static select for entity Admin.Repository.Models.TeacherModel: SELECT teachermod0_.Id as id1_2_0_, teachermod0_.timestamp as timestamp2_2_0_, teachermod0_.actor as actor3_2_0_, teachermod0_.name as name4_2_0_, teachermod0_.birthDate as birthdate5_2_0_, teachermod0_.address as address6_2_0_, teachermod0_.lastAcad as lastacad7_2_0_, teachermod0_.isDeleted as isdeleted8_2_0_ FROM teacher teachermod0_ WHERE teachermod0_.Id=? 
+DEBUG 25-10-2020 20:13:59 NHibernate.Loader.Entity.AbstractEntityLoader [1] - Static select for entity Admin.Repository.Models.TeacherModel: SELECT teachermod0_.Id as id1_2_0_, teachermod0_.timestamp as timestamp2_2_0_, teachermod0_.actor as actor3_2_0_, teachermod0_.name as name4_2_0_, teachermod0_.birthDate as birthdate5_2_0_, teachermod0_.address as address6_2_0_, teachermod0_.lastAcad as lastacad7_2_0_, teachermod0_.isDeleted as isdeleted8_2_0_ FROM teacher teachermod0_ with (updlock, rowlock) WHERE teachermod0_.Id=? 
+DEBUG 25-10-2020 20:13:59 NHibernate.Loader.Entity.AbstractEntityLoader [1] - Static select for entity Admin.Repository.Models.TeacherModel: SELECT teachermod0_.Id as id1_2_0_, teachermod0_.timestamp as timestamp2_2_0_, teachermod0_.actor as actor3_2_0_, teachermod0_.name as name4_2_0_, teachermod0_.birthDate as birthdate5_2_0_, teachermod0_.address as address6_2_0_, teachermod0_.lastAcad as lastacad7_2_0_, teachermod0_.isDeleted as isdeleted8_2_0_ FROM teacher teachermod0_ with (updlock, rowlock, nowait) WHERE teachermod0_.Id=? 
+DEBUG 25-10-2020 20:13:59 NHibernate.Loader.Entity.AbstractEntityLoader [1] - Static select for entity Admin.Repository.Models.TeacherModel: SELECT teachermod0_.Id as id1_2_0_, teachermod0_.timestamp as timestamp2_2_0_, teachermod0_.actor as actor3_2_0_, teachermod0_.name as name4_2_0_, teachermod0_.birthDate as birthdate5_2_0_, teachermod0_.address as address6_2_0_, teachermod0_.lastAcad as lastacad7_2_0_, teachermod0_.isDeleted as isdeleted8_2_0_ FROM teacher teachermod0_ with (updlock, rowlock) WHERE teachermod0_.Id=? 
+DEBUG 25-10-2020 20:13:59 NHibernate.Loader.Entity.AbstractEntityLoader [1] - Static select for action NHibernate.Engine.CascadingAction+MergeCascadingAction on entity Admin.Repository.Models.TeacherModel: SELECT teachermod0_.Id as id1_2_0_, teachermod0_.timestamp as timestamp2_2_0_, teachermod0_.actor as actor3_2_0_, teachermod0_.name as name4_2_0_, teachermod0_.birthDate as birthdate5_2_0_, teachermod0_.address as address6_2_0_, teachermod0_.lastAcad as lastacad7_2_0_, teachermod0_.isDeleted as isdeleted8_2_0_ FROM teacher teachermod0_ WHERE teachermod0_.Id=? 
+DEBUG 25-10-2020 20:13:59 NHibernate.Loader.Entity.AbstractEntityLoader [1] - Static select for action NHibernate.Engine.CascadingAction+RefreshCascadingAction on entity Admin.Repository.Models.TeacherModel: SELECT teachermod0_.Id as id1_2_0_, teachermod0_.timestamp as timestamp2_2_0_, teachermod0_.actor as actor3_2_0_, teachermod0_.name as name4_2_0_, teachermod0_.birthDate as birthdate5_2_0_, teachermod0_.address as address6_2_0_, teachermod0_.lastAcad as lastacad7_2_0_, teachermod0_.isDeleted as isdeleted8_2_0_ FROM teacher teachermod0_ WHERE teachermod0_.Id=? 
+DEBUG 25-10-2020 20:13:59 NHibernate.Loader.Collection.OneToManyLoader [1] - Static select for one-to-many Admin.Repository.Models.StudentModel.mapels: SELECT mapels0_.student_id as student12_0_1_, mapels0_.Id as id1_0_1_, mapels0_.Id as id1_0_0_, mapels0_.timestamp as timestamp2_0_0_, mapels0_.actor as actor3_0_0_, mapels0_.studentId as studentid4_0_0_, mapels0_.pai as pai5_0_0_, mapels0_.ipa as ipa6_0_0_, mapels0_.ips as ips7_0_0_, mapels0_.mtk as mtk8_0_0_, mapels0_.pkn as pkn9_0_0_, mapels0_.bindo as bindo10_0_0_, mapels0_.binggris as binggris11_0_0_, mapels0_.student_id as student12_0_0_ FROM mapel mapels0_ WHERE mapels0_.student_id=? 
+DEBUG 25-10-2020 20:13:59 NHibernate.Impl.SessionFactoryObjectFactory [1] - initializing class SessionFactoryObjectFactory 
+DEBUG 25-10-2020 20:13:59 NHibernate.Impl.SessionFactoryObjectFactory [1] - registered: e41fe0536e0044fe97b1c6ea84728e8b(unnamed) 
+INFO  25-10-2020 20:13:59 NHibernate.Impl.SessionFactoryObjectFactory [1] - no name configured 
+DEBUG 25-10-2020 20:13:59 NHibernate.Impl.SessionFactoryImpl [1] - Instantiated session factory 
+DEBUG 25-10-2020 20:13:59 NHibernate.Impl.SessionFactoryImpl [1] - Checking 0 named HQL queries 
+DEBUG 25-10-2020 20:13:59 NHibernate.Impl.SessionFactoryImpl [1] - Checking 0 named SQL queries 
+INFO  25-10-2020 20:14:01 Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager [1] - User profile is available. Using 'C:\Users\Rafdani\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest. 
+INFO  25-10-2020 20:14:20 Microsoft.AspNetCore.Hosting.Internal.WebHost [6] - Request starting HTTP/1.1 GET https://localhost:5091/api/docs/index.html   
+INFO  25-10-2020 20:14:20 Microsoft.AspNetCore.Hosting.Internal.WebHost [6] - Request starting HTTP/1.1 GET https://localhost:5091/api/docs/index.html   
+INFO  25-10-2020 20:14:21 Microsoft.AspNetCore.Hosting.Internal.WebHost [6] - Request finished in 704.3216ms 200 text/html 
+INFO  25-10-2020 20:14:21 Microsoft.AspNetCore.Hosting.Internal.WebHost [6] - Request finished in 704.3216ms 200 text/html 
+INFO  25-10-2020 20:14:23 Microsoft.AspNetCore.Hosting.Internal.WebHost [6] - Request starting HTTP/1.1 GET https://localhost:5091/api/docs/v1/swagger.json   
+INFO  25-10-2020 20:14:23 Microsoft.AspNetCore.Hosting.Internal.WebHost [6] - Request starting HTTP/1.1 GET https://localhost:5091/api/docs/v1/swagger.json   
+INFO  25-10-2020 20:14:24 Microsoft.AspNetCore.Hosting.Internal.WebHost [6] - Request finished in 897.1865ms 200 application/json;charset=utf-8 
+INFO  25-10-2020 20:14:24 Microsoft.AspNetCore.Hosting.Internal.WebHost [6] - Request finished in 897.1865ms 200 application/json;charset=utf-8 
+INFO  25-10-2020 20:18:50 Microsoft.AspNetCore.Hosting.Internal.WebHost [15] - Request starting HTTP/1.1 POST https://localhost:5091/Teacher application/json-patch+json 121 
+INFO  25-10-2020 20:18:50 Microsoft.AspNetCore.Hosting.Internal.WebHost [15] - Request starting HTTP/1.1 POST https://localhost:5091/Teacher application/json-patch+json 121 
+WARN  25-10-2020 20:18:50 Microsoft.AspNetCore.Cors.Infrastructure.CorsService [15] - The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the policy by listing individual origins if credentials needs to be supported. 
+WARN  25-10-2020 20:18:50 Microsoft.AspNetCore.Cors.Infrastructure.CorsService [15] - The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the policy by listing individual origins if credentials needs to be supported. 
+INFO  25-10-2020 20:18:50 Microsoft.AspNetCore.Cors.Infrastructure.CorsService [15] - CORS policy execution successful. 
+INFO  25-10-2020 20:18:50 Microsoft.AspNetCore.Cors.Infrastructure.CorsService [15] - CORS policy execution successful. 
+INFO  25-10-2020 20:18:50 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [15] - Route matched with {action = "RegisterNewTeacher", controller = "Teacher"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult RegisterNewTeacher(Admin.Common.Commands.AddTeacherCommand) on controller Admin.Api.AspNetCore.Controller.TeacherController (Admin.Api.AspNetCore). 
+INFO  25-10-2020 20:18:50 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [15] - Route matched with {action = "RegisterNewTeacher", controller = "Teacher"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult RegisterNewTeacher(Admin.Common.Commands.AddTeacherCommand) on controller Admin.Api.AspNetCore.Controller.TeacherController (Admin.Api.AspNetCore). 
+INFO  25-10-2020 20:18:51 QSI.Web.Middleware.LogActionFilter [15] - Receive RegisterNewTeacher on Teacher by Anonymous from ::1 
+INFO  25-10-2020 20:18:51 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [15] - Executing action method Admin.Api.AspNetCore.Controller.TeacherController.RegisterNewTeacher (Admin.Api.AspNetCore) - Validation state: Valid 
+INFO  25-10-2020 20:18:51 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [15] - Executing action method Admin.Api.AspNetCore.Controller.TeacherController.RegisterNewTeacher (Admin.Api.AspNetCore) - Validation state: Valid 
+DEBUG 25-10-2020 20:18:52 NHibernate.Impl.SessionFactoryImpl+SessionBuilderImpl`1[[NHibernate.ISessionBuilder, NHibernate, Version=5.1.0.0, Culture=neutral, PublicKeyToken=aa95f207798dfdb4]] [15] - Opening Hibernate Session. 
+DEBUG 25-10-2020 20:18:52 NHibernate.Impl.SessionImpl [15] - [session-id=72bac3e5-6e72-46ad-9edd-3589746dd0da] opened session at timestamp: 637392539321, for session factory: [/e41fe0536e0044fe97b1c6ea84728e8b] 
+DEBUG 25-10-2020 20:18:52 NHibernate.Transaction.AdoTransaction [15] - Begin (Unspecified) 
+DEBUG 25-10-2020 20:18:52 NHibernate.Connection.DriverConnectionProvider [15] - Obtaining DbConnection from Driver 
+DEBUG 25-10-2020 20:18:52 NHibernate.Engine.IdentifierValue [15] - unsaved-value: 0 
+DEBUG 25-10-2020 20:18:52 NHibernate.Event.Default.AbstractSaveEventListener [15] - transient instance of: Admin.Repository.Models.TeacherModel 
+INFO  25-10-2020 20:18:52 NHibernate.Event.Default.DefaultMergeEventListener [15] - merging transient instance 
+DEBUG 25-10-2020 20:18:52 NHibernate.Event.Default.AbstractSaveEventListener [15] - saving [Admin.Repository.Models.TeacherModel#<null>] 
+DEBUG 25-10-2020 20:18:52 NHibernate.Event.Default.AbstractSaveEventListener [15] - executing insertions 
+DEBUG 25-10-2020 20:18:52 NHibernate.Event.Default.AbstractSaveEventListener [15] - executing identity-insert immediately 
+DEBUG 25-10-2020 20:18:52 NHibernate.Persister.Entity.AbstractEntityPersister [15] - Inserting entity: Admin.Repository.Models.TeacherModel (native id) 
+DEBUG 25-10-2020 20:18:52 NHibernate.AdoNet.AbstractBatcher [15] - Opened new DbCommand, open DbCommands: 1 
+DEBUG 25-10-2020 20:18:52 NHibernate.AdoNet.AbstractBatcher [15] - Building an DbCommand object for the SqlString: INSERT INTO teacher (timestamp, actor, name, birthDate, address, lastAcad, isDeleted) VALUES (?, ?, ?, ?, ?, ?, ?); select SCOPE_IDENTITY() 
+DEBUG 25-10-2020 20:18:52 NHibernate.Persister.Entity.AbstractEntityPersister [15] - Dehydrating entity: [Admin.Repository.Models.TeacherModel#<null>] 
+DEBUG 25-10-2020 20:18:52 NHibernate.Type.DateTimeType [15] - binding '10/25/2020 8:18:52 PM' to parameter: 0 
+DEBUG 25-10-2020 20:18:52 NHibernate.Type.StringType [15] - binding null to parameter: 1 
+DEBUG 25-10-2020 20:18:52 NHibernate.Type.StringType [15] - binding 'risma' to parameter: 2 
+DEBUG 25-10-2020 20:18:52 NHibernate.Type.StringType [15] - binding '12 juli 2002' to parameter: 3 
+DEBUG 25-10-2020 20:18:52 NHibernate.Type.StringType [15] - binding 'cilacp[' to parameter: 4 
+DEBUG 25-10-2020 20:18:52 NHibernate.Type.StringType [15] - binding 'string' to parameter: 5 
+DEBUG 25-10-2020 20:18:52 NHibernate.Type.BooleanType [15] - binding 'True' to parameter: 6 
+DEBUG 25-10-2020 20:18:52 NHibernate.SQL [15] - 
+    INSERT 
+    INTO
+        teacher
+        (timestamp, actor, name, birthDate, address, lastAcad, isDeleted) 
+    VALUES
+        (@p0, @p1, @p2, @p3, @p4, @p5, @p6);
+    select
+        SCOPE_IDENTITY();
+    @p0 = 2020-10-25T20:18:52.1227550+07:00 [Type: DateTime2 (8:0:0)],
+    @p1 = NULL [Type: String (4000:0:0)],
+    @p2 = 'risma' [Type: String (4000:0:0)],
+    @p3 = '12 juli 2002' [Type: String (4000:0:0)],
+    @p4 = 'cilacp[' [Type: String (4000:0:0)],
+    @p5 = 'string' [Type: String (4000:0:0)],
+    @p6 = True [Type: Boolean (0:0:0)] 
+DEBUG 25-10-2020 20:18:52 NHibernate.Transaction.AdoTransaction [15] - Enlist Command 
+DEBUG 25-10-2020 20:18:52 NHibernate.AdoNet.AbstractBatcher [15] - ExecuteReader took 5 ms 
+DEBUG 25-10-2020 20:18:52 NHibernate.AdoNet.AbstractBatcher [15] - Opened DbDataReader, open DbDataReaders: 1 
+DEBUG 25-10-2020 20:18:52 NHibernate.Type.Int32Type [15] - returning '1' as column:  
+DEBUG 25-10-2020 20:18:52 NHibernate.Id.IdentifierGeneratorFactory [15] - Natively generated identity: 1 
+DEBUG 25-10-2020 20:18:52 NHibernate.AdoNet.AbstractBatcher [15] - Closed DbDataReader, open DbDataReaders :0 
+DEBUG 25-10-2020 20:18:52 NHibernate.AdoNet.AbstractBatcher [15] - DataReader was closed after 50 ms 
+DEBUG 25-10-2020 20:18:52 NHibernate.AdoNet.AbstractBatcher [15] - Closed DbCommand, open DbCommands: 0 
+DEBUG 25-10-2020 20:18:52 NHibernate.Transaction.AdoTransaction [15] - Start Commit 
+DEBUG 25-10-2020 20:18:52 NHibernate.Impl.SessionImpl [15] - before transaction completion 
+DEBUG 25-10-2020 20:18:52 NHibernate.Event.Default.AbstractFlushingEventListener [15] - flushing session 
+DEBUG 25-10-2020 20:18:52 NHibernate.Event.Default.AbstractFlushingEventListener [15] - processing flush-time cascades 
+DEBUG 25-10-2020 20:18:52 NHibernate.Event.Default.AbstractFlushingEventListener [15] - dirty checking collections 
+DEBUG 25-10-2020 20:18:52 NHibernate.Event.Default.AbstractFlushingEventListener [15] - Flushing entities and processing referenced collections 
+DEBUG 25-10-2020 20:18:52 NHibernate.Event.Default.AbstractFlushingEventListener [15] - Processing unreferenced collections 
+DEBUG 25-10-2020 20:18:52 NHibernate.Event.Default.AbstractFlushingEventListener [15] - Scheduling collection removes/(re)creates/updates 
+DEBUG 25-10-2020 20:18:52 NHibernate.Event.Default.AbstractFlushingEventListener [15] - Flushed: 0 insertions, 0 updates, 0 deletions to 1 objects 
+DEBUG 25-10-2020 20:18:52 NHibernate.Event.Default.AbstractFlushingEventListener [15] - Flushed: 0 (re)creations, 0 updates, 0 removals to 0 collections 
+DEBUG 25-10-2020 20:18:52 NHibernate.Impl.Printer [15] - listing entities: 
+DEBUG 25-10-2020 20:18:52 NHibernate.Impl.Printer [15] - Admin.Repository.Models.TeacherModel{'Id'='1', 'Timestamp'='10/25/2020 8:18:52 PM', 'Actor'=null, 'name'='risma', 'birthDate'='12 juli 2002', 'address'='cilacp[', 'lastAcad'='string', 'isDeleted'='True'} 
+DEBUG 25-10-2020 20:18:52 NHibernate.Event.Default.AbstractFlushingEventListener [15] - executing flush 
+DEBUG 25-10-2020 20:18:52 NHibernate.AdoNet.ConnectionManager [15] - Registering flush begin 
+DEBUG 25-10-2020 20:18:52 NHibernate.AdoNet.ConnectionManager [15] - Registering flush end 
+DEBUG 25-10-2020 20:18:52 NHibernate.Event.Default.AbstractFlushingEventListener [15] - post flush 
+DEBUG 25-10-2020 20:18:52 NHibernate.Transaction.AdoTransaction [15] - DbTransaction Committed 
+DEBUG 25-10-2020 20:18:52 NHibernate.AdoNet.ConnectionManager [15] - Aggressively releasing database connection 
+DEBUG 25-10-2020 20:18:52 NHibernate.Connection.ConnectionProvider [15] - Closing connection 
+DEBUG 25-10-2020 20:18:52 NHibernate.Impl.SessionImpl [15] - transaction completion 
+DEBUG 25-10-2020 20:18:52 NHibernate.Transaction.AdoTransaction [15] - DbTransaction disposed. 
+DEBUG 25-10-2020 20:18:52 NHibernate.Impl.SessionImpl [15] - closing session 
+DEBUG 25-10-2020 20:18:52 NHibernate.AdoNet.AbstractBatcher [15] - running BatcherImpl.Dispose(true) 
+INFO  25-10-2020 20:18:52 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [15] - Executed action method Admin.Api.AspNetCore.Controller.TeacherController.RegisterNewTeacher (Admin.Api.AspNetCore), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 1038.9292ms. 
+INFO  25-10-2020 20:18:52 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [15] - Executed action method Admin.Api.AspNetCore.Controller.TeacherController.RegisterNewTeacher (Admin.Api.AspNetCore), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 1038.9292ms. 
+INFO  25-10-2020 20:18:52 Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor [15] - Executing ObjectResult, writing value of type 'System.Int32'. 
+INFO  25-10-2020 20:18:52 Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor [15] - Executing ObjectResult, writing value of type 'System.Int32'. 
+INFO  25-10-2020 20:18:53 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [15] - Executed action Admin.Api.AspNetCore.Controller.TeacherController.RegisterNewTeacher (Admin.Api.AspNetCore) in 2363.1677ms 
+INFO  25-10-2020 20:18:53 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [15] - Executed action Admin.Api.AspNetCore.Controller.TeacherController.RegisterNewTeacher (Admin.Api.AspNetCore) in 2363.1677ms 
+INFO  25-10-2020 20:18:53 Microsoft.AspNetCore.Hosting.Internal.WebHost [15] - Request finished in 2744.2267ms 200 application/json; charset=utf-8 
+INFO  25-10-2020 20:18:53 Microsoft.AspNetCore.Hosting.Internal.WebHost [15] - Request finished in 2744.2267ms 200 application/json; charset=utf-8 
+INFO  25-10-2020 20:20:20 Microsoft.AspNetCore.Hosting.Internal.WebHost [47] - Request starting HTTP/1.1 GET https://localhost:5091/Teacher/risma   
+INFO  25-10-2020 20:20:20 Microsoft.AspNetCore.Hosting.Internal.WebHost [47] - Request starting HTTP/1.1 GET https://localhost:5091/Teacher/risma   
+INFO  25-10-2020 20:20:20 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [47] - Route matched with {action = "GetStudenById", controller = "Teacher"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[Admin.Common.Dtos.TeacherDto] GetStudenById(Int32) on controller Admin.Api.AspNetCore.Controller.TeacherController (Admin.Api.AspNetCore). 
+INFO  25-10-2020 20:20:20 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [47] - Route matched with {action = "GetStudenById", controller = "Teacher"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[Admin.Common.Dtos.TeacherDto] GetStudenById(Int32) on controller Admin.Api.AspNetCore.Controller.TeacherController (Admin.Api.AspNetCore). 
+INFO  25-10-2020 20:20:20 Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor [47] - Executing ObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.SerializableError'. 
+INFO  25-10-2020 20:20:20 Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor [47] - Executing ObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.SerializableError'. 
+INFO  25-10-2020 20:20:20 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [47] - Executed action Admin.Api.AspNetCore.Controller.TeacherController.GetStudenById (Admin.Api.AspNetCore) in 113.3741ms 
+INFO  25-10-2020 20:20:20 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [47] - Executed action Admin.Api.AspNetCore.Controller.TeacherController.GetStudenById (Admin.Api.AspNetCore) in 113.3741ms 
+INFO  25-10-2020 20:20:20 Microsoft.AspNetCore.Hosting.Internal.WebHost [47] - Request finished in 136.6319ms 400 application/json; charset=utf-8 
+INFO  25-10-2020 20:20:20 Microsoft.AspNetCore.Hosting.Internal.WebHost [47] - Request finished in 136.6319ms 400 application/json; charset=utf-8 
+INFO  25-10-2020 20:24:58 Microsoft.AspNetCore.Hosting.Internal.WebHost [15] - Request starting HTTP/1.1 PUT https://localhost:5091/Teacher/1 application/json-patch+json 138 
+INFO  25-10-2020 20:24:58 Microsoft.AspNetCore.Hosting.Internal.WebHost [15] - Request starting HTTP/1.1 PUT https://localhost:5091/Teacher/1 application/json-patch+json 138 
+WARN  25-10-2020 20:24:58 Microsoft.AspNetCore.Cors.Infrastructure.CorsService [15] - The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the policy by listing individual origins if credentials needs to be supported. 
+WARN  25-10-2020 20:24:58 Microsoft.AspNetCore.Cors.Infrastructure.CorsService [15] - The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the policy by listing individual origins if credentials needs to be supported. 
+INFO  25-10-2020 20:24:58 Microsoft.AspNetCore.Cors.Infrastructure.CorsService [15] - CORS policy execution successful. 
+INFO  25-10-2020 20:24:58 Microsoft.AspNetCore.Cors.Infrastructure.CorsService [15] - CORS policy execution successful. 
+INFO  25-10-2020 20:24:58 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [15] - Route matched with {action = "UpdateTeacher", controller = "Teacher"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult UpdateTeacher(Admin.Common.Commands.AddTeacherCommand, Int32) on controller Admin.Api.AspNetCore.Controller.TeacherController (Admin.Api.AspNetCore). 
+INFO  25-10-2020 20:24:58 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [15] - Route matched with {action = "UpdateTeacher", controller = "Teacher"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult UpdateTeacher(Admin.Common.Commands.AddTeacherCommand, Int32) on controller Admin.Api.AspNetCore.Controller.TeacherController (Admin.Api.AspNetCore). 
+INFO  25-10-2020 20:24:58 QSI.Web.Middleware.LogActionFilter [15] - Receive UpdateTeacher on Teacher by Anonymous from ::1 
+INFO  25-10-2020 20:24:58 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [15] - Executing action method Admin.Api.AspNetCore.Controller.TeacherController.UpdateTeacher (Admin.Api.AspNetCore) - Validation state: Valid 
+INFO  25-10-2020 20:24:58 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [15] - Executing action method Admin.Api.AspNetCore.Controller.TeacherController.UpdateTeacher (Admin.Api.AspNetCore) - Validation state: Valid 
+DEBUG 25-10-2020 20:24:58 NHibernate.Impl.SessionFactoryImpl+SessionBuilderImpl`1[[NHibernate.ISessionBuilder, NHibernate, Version=5.1.0.0, Culture=neutral, PublicKeyToken=aa95f207798dfdb4]] [15] - Opening Hibernate Session. 
+DEBUG 25-10-2020 20:24:58 NHibernate.Impl.SessionImpl [15] - [session-id=5bcd7dad-ac70-4286-b76f-4837b2a65687] opened session at timestamp: 637392542986, for session factory: [/e41fe0536e0044fe97b1c6ea84728e8b] 
+DEBUG 25-10-2020 20:24:58 NHibernate.Transaction.AdoTransaction [15] - Begin (Unspecified) 
+DEBUG 25-10-2020 20:24:58 NHibernate.Connection.DriverConnectionProvider [15] - Obtaining DbConnection from Driver 
+DEBUG 25-10-2020 20:24:58 NHibernate.Loader.Criteria.CriteriaQueryTranslator [15] - put criteria=Id = 1 alias=this0_ 
+DEBUG 25-10-2020 20:24:58 NHibernate.Loader.Criteria.CriteriaQueryTranslator [15] - returning alias=this_ for criteria=Id = 1 
+DEBUG 25-10-2020 20:24:58 NHibernate.AdoNet.AbstractBatcher [15] - Opened new DbCommand, open DbCommands: 1 
+DEBUG 25-10-2020 20:24:58 NHibernate.AdoNet.AbstractBatcher [15] - Building an DbCommand object for the SqlString: SELECT this_.Id as id1_2_0_, this_.timestamp as timestamp2_2_0_, this_.actor as actor3_2_0_, this_.name as name4_2_0_, this_.birthDate as birthdate5_2_0_, this_.address as address6_2_0_, this_.lastAcad as lastacad7_2_0_, this_.isDeleted as isdeleted8_2_0_ FROM teacher this_ WHERE this_.Id = ? 
+DEBUG 25-10-2020 20:24:58 NHibernate.Type.Int32Type [15] - binding '1' to parameter: 0 
+DEBUG 25-10-2020 20:24:58 NHibernate.SQL [15] - 
+    SELECT
+        this_.Id as id1_2_0_,
+        this_.timestamp as timestamp2_2_0_,
+        this_.actor as actor3_2_0_,
+        this_.name as name4_2_0_,
+        this_.birthDate as birthdate5_2_0_,
+        this_.address as address6_2_0_,
+        this_.lastAcad as lastacad7_2_0_,
+        this_.isDeleted as isdeleted8_2_0_ 
+    FROM
+        teacher this_ 
+    WHERE
+        this_.Id = @p0;
+    @p0 = 1 [Type: Int32 (0:0:0)] 
+DEBUG 25-10-2020 20:24:58 NHibernate.Transaction.AdoTransaction [15] - Enlist Command 
+DEBUG 25-10-2020 20:24:58 NHibernate.AdoNet.AbstractBatcher [15] - ExecuteReader took 2 ms 
+DEBUG 25-10-2020 20:24:58 NHibernate.AdoNet.AbstractBatcher [15] - Opened DbDataReader, open DbDataReaders: 1 
+DEBUG 25-10-2020 20:24:58 NHibernate.Loader.Loader [15] - processing result set 
+DEBUG 25-10-2020 20:24:58 NHibernate.Loader.Loader [15] - result set row: 0 
+DEBUG 25-10-2020 20:24:58 NHibernate.Type.Int32Type [15] - returning '1' as column: id1_2_0_ 
+DEBUG 25-10-2020 20:24:58 NHibernate.Loader.Loader [15] - result row: EntityKey[Admin.Repository.Models.TeacherModel#1] 
+DEBUG 25-10-2020 20:24:58 NHibernate.Loader.Loader [15] - Initializing object from DataReader: [Admin.Repository.Models.TeacherModel#1] 
+DEBUG 25-10-2020 20:24:58 NHibernate.Persister.Entity.AbstractEntityPersister [15] - Hydrating entity: [Admin.Repository.Models.TeacherModel#1] 
+DEBUG 25-10-2020 20:24:58 NHibernate.Type.DateTimeType [15] - returning '10/25/2020 8:18:52 PM' as column: timestamp2_2_0_ 
+DEBUG 25-10-2020 20:24:58 NHibernate.Type.StringType [15] - returning null as column: actor3_2_0_ 
+DEBUG 25-10-2020 20:24:58 NHibernate.Type.StringType [15] - returning 'risma' as column: name4_2_0_ 
+DEBUG 25-10-2020 20:24:58 NHibernate.Type.StringType [15] - returning '12 juli 2002' as column: birthdate5_2_0_ 
+DEBUG 25-10-2020 20:24:58 NHibernate.Type.StringType [15] - returning 'cilacp[' as column: address6_2_0_ 
+DEBUG 25-10-2020 20:24:58 NHibernate.Type.StringType [15] - returning 'string' as column: lastacad7_2_0_ 
+DEBUG 25-10-2020 20:24:58 NHibernate.Type.BooleanType [15] - returning 'True' as column: isdeleted8_2_0_ 
+DEBUG 25-10-2020 20:24:58 NHibernate.Loader.Loader [15] - done processing result set (1 rows) 
+DEBUG 25-10-2020 20:24:58 NHibernate.AdoNet.AbstractBatcher [15] - Closed DbDataReader, open DbDataReaders :0 
+DEBUG 25-10-2020 20:24:58 NHibernate.AdoNet.AbstractBatcher [15] - DataReader was closed after 25 ms 
+DEBUG 25-10-2020 20:24:58 NHibernate.AdoNet.AbstractBatcher [15] - Closed DbCommand, open DbCommands: 0 
+DEBUG 25-10-2020 20:24:58 NHibernate.Loader.Loader [15] - total objects hydrated: 1 
+DEBUG 25-10-2020 20:24:58 NHibernate.Engine.TwoPhaseLoad [15] - resolving associations for [Admin.Repository.Models.TeacherModel#1] 
+DEBUG 25-10-2020 20:24:58 NHibernate.Engine.TwoPhaseLoad [15] - done materializing entity [Admin.Repository.Models.TeacherModel#1] 
+DEBUG 25-10-2020 20:24:58 NHibernate.Engine.StatefulPersistenceContext [15] - initializing non-lazy collections 
+DEBUG 25-10-2020 20:24:58 NHibernate.Transaction.AdoTransaction [15] - Start Commit 
+DEBUG 25-10-2020 20:24:58 NHibernate.Impl.SessionImpl [15] - before transaction completion 
+DEBUG 25-10-2020 20:24:58 NHibernate.Event.Default.AbstractFlushingEventListener [15] - flushing session 
+DEBUG 25-10-2020 20:24:58 NHibernate.Event.Default.AbstractFlushingEventListener [15] - processing flush-time cascades 
+DEBUG 25-10-2020 20:24:58 NHibernate.Event.Default.AbstractFlushingEventListener [15] - dirty checking collections 
+DEBUG 25-10-2020 20:24:58 NHibernate.Event.Default.AbstractFlushingEventListener [15] - Flushing entities and processing referenced collections 
+DEBUG 25-10-2020 20:24:58 NHibernate.Event.Default.AbstractFlushingEventListener [15] - Processing unreferenced collections 
+DEBUG 25-10-2020 20:24:58 NHibernate.Event.Default.AbstractFlushingEventListener [15] - Scheduling collection removes/(re)creates/updates 
+DEBUG 25-10-2020 20:24:58 NHibernate.Event.Default.AbstractFlushingEventListener [15] - Flushed: 0 insertions, 0 updates, 0 deletions to 1 objects 
+DEBUG 25-10-2020 20:24:58 NHibernate.Event.Default.AbstractFlushingEventListener [15] - Flushed: 0 (re)creations, 0 updates, 0 removals to 0 collections 
+DEBUG 25-10-2020 20:24:58 NHibernate.Impl.Printer [15] - listing entities: 
+DEBUG 25-10-2020 20:24:58 NHibernate.Impl.Printer [15] - Admin.Repository.Models.TeacherModel{'Id'='1', 'Timestamp'='10/25/2020 8:18:52 PM', 'Actor'=null, 'name'='risma', 'birthDate'='12 juli 2002', 'address'='cilacp[', 'lastAcad'='string', 'isDeleted'='True'} 
+DEBUG 25-10-2020 20:24:58 NHibernate.Event.Default.AbstractFlushingEventListener [15] - executing flush 
+DEBUG 25-10-2020 20:24:58 NHibernate.AdoNet.ConnectionManager [15] - Registering flush begin 
+DEBUG 25-10-2020 20:24:58 NHibernate.AdoNet.ConnectionManager [15] - Registering flush end 
+DEBUG 25-10-2020 20:24:58 NHibernate.Event.Default.AbstractFlushingEventListener [15] - post flush 
+DEBUG 25-10-2020 20:24:58 NHibernate.Transaction.AdoTransaction [15] - DbTransaction Committed 
+DEBUG 25-10-2020 20:24:58 NHibernate.AdoNet.ConnectionManager [15] - Aggressively releasing database connection 
+DEBUG 25-10-2020 20:24:58 NHibernate.Connection.ConnectionProvider [15] - Closing connection 
+DEBUG 25-10-2020 20:24:58 NHibernate.Impl.SessionImpl [15] - transaction completion 
+DEBUG 25-10-2020 20:24:58 NHibernate.Transaction.AdoTransaction [15] - DbTransaction disposed. 
+DEBUG 25-10-2020 20:24:58 NHibernate.Impl.SessionImpl [15] - closing session 
+DEBUG 25-10-2020 20:24:58 NHibernate.AdoNet.AbstractBatcher [15] - running BatcherImpl.Dispose(true) 
+DEBUG 25-10-2020 20:24:58 NHibernate.Impl.SessionFactoryImpl+SessionBuilderImpl`1[[NHibernate.ISessionBuilder, NHibernate, Version=5.1.0.0, Culture=neutral, PublicKeyToken=aa95f207798dfdb4]] [15] - Opening Hibernate Session. 
+DEBUG 25-10-2020 20:24:58 NHibernate.Impl.SessionImpl [15] - [session-id=3f71a258-f052-435a-a529-c0d6a351a28a] opened session at timestamp: 637392542988, for session factory: [/e41fe0536e0044fe97b1c6ea84728e8b] 
+DEBUG 25-10-2020 20:24:58 NHibernate.Transaction.AdoTransaction [15] - Begin (Unspecified) 
+DEBUG 25-10-2020 20:24:58 NHibernate.Connection.DriverConnectionProvider [15] - Obtaining DbConnection from Driver 
+DEBUG 25-10-2020 20:24:58 NHibernate.Event.Default.DefaultLoadEventListener [15] - loading entity: [Admin.Repository.Models.TeacherModel#1] 
+DEBUG 25-10-2020 20:24:58 NHibernate.Event.Default.DefaultLoadEventListener [15] - creating new proxy for entity 
+DEBUG 25-10-2020 20:24:58 NHibernate.Impl.SessionImpl [15] - initializing proxy: [Admin.Repository.Models.TeacherModel#1] 
+DEBUG 25-10-2020 20:24:58 NHibernate.Event.Default.DefaultLoadEventListener [15] - attempting to resolve: [Admin.Repository.Models.TeacherModel#1] 
+DEBUG 25-10-2020 20:24:58 NHibernate.Event.Default.DefaultLoadEventListener [15] - object not resolved in any cache: [Admin.Repository.Models.TeacherModel#1] 
+DEBUG 25-10-2020 20:24:58 NHibernate.Persister.Entity.AbstractEntityPersister [15] - Fetching entity: [Admin.Repository.Models.TeacherModel#1] 
+DEBUG 25-10-2020 20:24:58 NHibernate.Loader.Loader [15] - loading entity: [Admin.Repository.Models.TeacherModel#1] 
+DEBUG 25-10-2020 20:24:58 NHibernate.AdoNet.AbstractBatcher [15] - Opened new DbCommand, open DbCommands: 1 
+DEBUG 25-10-2020 20:24:58 NHibernate.AdoNet.AbstractBatcher [15] - Building an DbCommand object for the SqlString: SELECT teachermod0_.Id as id1_2_0_, teachermod0_.timestamp as timestamp2_2_0_, teachermod0_.actor as actor3_2_0_, teachermod0_.name as name4_2_0_, teachermod0_.birthDate as birthdate5_2_0_, teachermod0_.address as address6_2_0_, teachermod0_.lastAcad as lastacad7_2_0_, teachermod0_.isDeleted as isdeleted8_2_0_ FROM teacher teachermod0_ WHERE teachermod0_.Id=? 
+DEBUG 25-10-2020 20:24:58 NHibernate.Type.Int32Type [15] - binding '1' to parameter: 0 
+DEBUG 25-10-2020 20:24:58 NHibernate.SQL [15] - 
+    SELECT
+        teachermod0_.Id as id1_2_0_,
+        teachermod0_.timestamp as timestamp2_2_0_,
+        teachermod0_.actor as actor3_2_0_,
+        teachermod0_.name as name4_2_0_,
+        teachermod0_.birthDate as birthdate5_2_0_,
+        teachermod0_.address as address6_2_0_,
+        teachermod0_.lastAcad as lastacad7_2_0_,
+        teachermod0_.isDeleted as isdeleted8_2_0_ 
+    FROM
+        teacher teachermod0_ 
+    WHERE
+        teachermod0_.Id=@p0;
+    @p0 = 1 [Type: Int32 (0:0:0)] 
+DEBUG 25-10-2020 20:24:58 NHibernate.Transaction.AdoTransaction [15] - Enlist Command 
+DEBUG 25-10-2020 20:24:58 NHibernate.AdoNet.AbstractBatcher [15] - ExecuteReader took 2 ms 
+DEBUG 25-10-2020 20:24:58 NHibernate.AdoNet.AbstractBatcher [15] - Opened DbDataReader, open DbDataReaders: 1 
+DEBUG 25-10-2020 20:24:58 NHibernate.Loader.Loader [15] - processing result set 
+DEBUG 25-10-2020 20:24:58 NHibernate.Loader.Loader [15] - result set row: 0 
+DEBUG 25-10-2020 20:24:58 NHibernate.Loader.Loader [15] - result row: EntityKey[Admin.Repository.Models.TeacherModel#1] 
+DEBUG 25-10-2020 20:24:58 NHibernate.Loader.Loader [15] - Initializing object from DataReader: [Admin.Repository.Models.TeacherModel#1] 
+DEBUG 25-10-2020 20:24:58 NHibernate.Persister.Entity.AbstractEntityPersister [15] - Hydrating entity: [Admin.Repository.Models.TeacherModel#1] 
+DEBUG 25-10-2020 20:24:58 NHibernate.Type.DateTimeType [15] - returning '10/25/2020 8:18:52 PM' as column: timestamp2_2_0_ 
+DEBUG 25-10-2020 20:24:58 NHibernate.Type.StringType [15] - returning null as column: actor3_2_0_ 
+DEBUG 25-10-2020 20:24:58 NHibernate.Type.StringType [15] - returning 'risma' as column: name4_2_0_ 
+DEBUG 25-10-2020 20:24:58 NHibernate.Type.StringType [15] - returning '12 juli 2002' as column: birthdate5_2_0_ 
+DEBUG 25-10-2020 20:24:58 NHibernate.Type.StringType [15] - returning 'cilacp[' as column: address6_2_0_ 
+DEBUG 25-10-2020 20:24:58 NHibernate.Type.StringType [15] - returning 'string' as column: lastacad7_2_0_ 
+DEBUG 25-10-2020 20:24:58 NHibernate.Type.BooleanType [15] - returning 'True' as column: isdeleted8_2_0_ 
+DEBUG 25-10-2020 20:24:58 NHibernate.Loader.Loader [15] - done processing result set (1 rows) 
+DEBUG 25-10-2020 20:24:58 NHibernate.AdoNet.AbstractBatcher [15] - Closed DbDataReader, open DbDataReaders :0 
+DEBUG 25-10-2020 20:24:58 NHibernate.AdoNet.AbstractBatcher [15] - DataReader was closed after 3 ms 
+DEBUG 25-10-2020 20:24:58 NHibernate.AdoNet.AbstractBatcher [15] - Closed DbCommand, open DbCommands: 0 
+DEBUG 25-10-2020 20:24:58 NHibernate.Loader.Loader [15] - total objects hydrated: 1 
+DEBUG 25-10-2020 20:24:58 NHibernate.Engine.TwoPhaseLoad [15] - resolving associations for [Admin.Repository.Models.TeacherModel#1] 
+DEBUG 25-10-2020 20:24:58 NHibernate.Engine.TwoPhaseLoad [15] - done materializing entity [Admin.Repository.Models.TeacherModel#1] 
+DEBUG 25-10-2020 20:24:58 NHibernate.Engine.StatefulPersistenceContext [15] - initializing non-lazy collections 
+DEBUG 25-10-2020 20:24:58 NHibernate.Loader.Loader [15] - done entity load 
+DEBUG 25-10-2020 20:24:58 NHibernate.Event.Default.DefaultDeleteEventListener [15] - deleting a persistent instance 
+DEBUG 25-10-2020 20:24:58 NHibernate.Event.Default.DefaultDeleteEventListener [15] - deleting [Admin.Repository.Models.TeacherModel#1] 
+DEBUG 25-10-2020 20:24:58 NHibernate.Impl.SessionImpl [15] - setting cache mode to: Get 
+DEBUG 25-10-2020 20:24:58 NHibernate.Impl.SessionImpl [15] - setting cache mode to: Normal 
+DEBUG 25-10-2020 20:24:58 NHibernate.Impl.SessionImpl [15] - setting cache mode to: Get 
+DEBUG 25-10-2020 20:24:58 NHibernate.Impl.SessionImpl [15] - setting cache mode to: Normal 
+DEBUG 25-10-2020 20:24:58 NHibernate.Transaction.AdoTransaction [15] - Start Commit 
+DEBUG 25-10-2020 20:24:58 NHibernate.Impl.SessionImpl [15] - before transaction completion 
+DEBUG 25-10-2020 20:24:58 NHibernate.Event.Default.AbstractFlushingEventListener [15] - flushing session 
+DEBUG 25-10-2020 20:24:58 NHibernate.Event.Default.AbstractFlushingEventListener [15] - processing flush-time cascades 
+DEBUG 25-10-2020 20:24:58 NHibernate.Event.Default.AbstractFlushingEventListener [15] - dirty checking collections 
+DEBUG 25-10-2020 20:24:58 NHibernate.Event.Default.AbstractFlushingEventListener [15] - Flushing entities and processing referenced collections 
+DEBUG 25-10-2020 20:24:58 NHibernate.Event.Default.AbstractFlushingEventListener [15] - Processing unreferenced collections 
+DEBUG 25-10-2020 20:24:58 NHibernate.Event.Default.AbstractFlushingEventListener [15] - Scheduling collection removes/(re)creates/updates 
+DEBUG 25-10-2020 20:24:58 NHibernate.Event.Default.AbstractFlushingEventListener [15] - Flushed: 0 insertions, 0 updates, 1 deletions to 1 objects 
+DEBUG 25-10-2020 20:24:58 NHibernate.Event.Default.AbstractFlushingEventListener [15] - Flushed: 0 (re)creations, 0 updates, 0 removals to 0 collections 
+DEBUG 25-10-2020 20:24:58 NHibernate.Impl.Printer [15] - listing entities: 
+DEBUG 25-10-2020 20:24:58 NHibernate.Impl.Printer [15] - Admin.Repository.Models.TeacherModel{'Id'='1', 'Timestamp'='10/25/2020 8:18:52 PM', 'Actor'=null, 'name'='risma', 'birthDate'='12 juli 2002', 'address'='cilacp[', 'lastAcad'='string', 'isDeleted'='True'} 
+DEBUG 25-10-2020 20:24:58 NHibernate.Event.Default.AbstractFlushingEventListener [15] - executing flush 
+DEBUG 25-10-2020 20:24:58 NHibernate.AdoNet.ConnectionManager [15] - Registering flush begin 
+DEBUG 25-10-2020 20:24:58 NHibernate.Persister.Entity.AbstractEntityPersister [15] - Deleting entity: [Admin.Repository.Models.TeacherModel#1] 
+DEBUG 25-10-2020 20:24:58 NHibernate.AdoNet.AbstractBatcher [15] - Opened new DbCommand, open DbCommands: 1 
+DEBUG 25-10-2020 20:24:58 NHibernate.AdoNet.AbstractBatcher [15] - Building an DbCommand object for the SqlString: DELETE FROM teacher WHERE Id = ? 
+DEBUG 25-10-2020 20:24:58 NHibernate.Type.Int32Type [15] - binding '1' to parameter: 0 
+DEBUG 25-10-2020 20:24:58 NHibernate.AdoNet.AbstractBatcher [15] - Adding to batch:
+    DELETE 
+    FROM
+        teacher 
+    WHERE
+        Id = @p0;
+    @p0 = 1 [Type: Int32 (0:0:0)] 
+DEBUG 25-10-2020 20:24:58 NHibernate.AdoNet.AbstractBatcher [15] - Executing batch 
+DEBUG 25-10-2020 20:24:58 NHibernate.SQL [15] - Batch commands:
+command 0:
+    DELETE 
+    FROM
+        teacher 
+    WHERE
+        Id = @p0;
+    @p0 = 1 [Type: Int32 (0:0:0)]
+ 
+DEBUG 25-10-2020 20:24:58 NHibernate.Transaction.AdoTransaction [15] - Enlist Command 
+DEBUG 25-10-2020 20:24:58 NHibernate.AdoNet.AbstractBatcher [15] - ExecuteBatch for 1 statements took 8 ms 
+DEBUG 25-10-2020 20:24:58 NHibernate.AdoNet.AbstractBatcher [15] - Closed DbCommand, open DbCommands: 0 
+DEBUG 25-10-2020 20:24:58 NHibernate.AdoNet.ConnectionManager [15] - Registering flush end 
+DEBUG 25-10-2020 20:24:58 NHibernate.Event.Default.AbstractFlushingEventListener [15] - post flush 
+DEBUG 25-10-2020 20:24:59 NHibernate.Transaction.AdoTransaction [15] - DbTransaction Committed 
+DEBUG 25-10-2020 20:24:59 NHibernate.AdoNet.ConnectionManager [15] - Aggressively releasing database connection 
+DEBUG 25-10-2020 20:24:59 NHibernate.Connection.ConnectionProvider [15] - Closing connection 
+DEBUG 25-10-2020 20:24:59 NHibernate.Impl.SessionImpl [15] - transaction completion 
+DEBUG 25-10-2020 20:24:59 NHibernate.Transaction.AdoTransaction [15] - DbTransaction disposed. 
+DEBUG 25-10-2020 20:24:59 NHibernate.Impl.SessionImpl [15] - closing session 
+DEBUG 25-10-2020 20:24:59 NHibernate.AdoNet.AbstractBatcher [15] - running BatcherImpl.Dispose(true) 
+DEBUG 25-10-2020 20:24:59 NHibernate.Impl.SessionFactoryImpl+SessionBuilderImpl`1[[NHibernate.ISessionBuilder, NHibernate, Version=5.1.0.0, Culture=neutral, PublicKeyToken=aa95f207798dfdb4]] [15] - Opening Hibernate Session. 
+DEBUG 25-10-2020 20:24:59 NHibernate.Impl.SessionImpl [15] - [session-id=15b056f8-a6bb-4839-8fbc-18cb02fcdd97] opened session at timestamp: 637392542990, for session factory: [/e41fe0536e0044fe97b1c6ea84728e8b] 
+DEBUG 25-10-2020 20:24:59 NHibernate.Transaction.AdoTransaction [15] - Begin (Unspecified) 
+DEBUG 25-10-2020 20:24:59 NHibernate.Connection.DriverConnectionProvider [15] - Obtaining DbConnection from Driver 
+DEBUG 25-10-2020 20:24:59 NHibernate.Engine.IdentifierValue [15] - unsaved-value: 0 
+DEBUG 25-10-2020 20:24:59 NHibernate.Event.Default.AbstractSaveEventListener [15] - transient instance of: Admin.Repository.Models.TeacherModel 
+INFO  25-10-2020 20:24:59 NHibernate.Event.Default.DefaultMergeEventListener [15] - merging transient instance 
+DEBUG 25-10-2020 20:24:59 NHibernate.Event.Default.AbstractSaveEventListener [15] - saving [Admin.Repository.Models.TeacherModel#<null>] 
+DEBUG 25-10-2020 20:24:59 NHibernate.Event.Default.AbstractSaveEventListener [15] - executing insertions 
+DEBUG 25-10-2020 20:24:59 NHibernate.Event.Default.AbstractSaveEventListener [15] - executing identity-insert immediately 
+DEBUG 25-10-2020 20:24:59 NHibernate.Persister.Entity.AbstractEntityPersister [15] - Inserting entity: Admin.Repository.Models.TeacherModel (native id) 
+DEBUG 25-10-2020 20:24:59 NHibernate.AdoNet.AbstractBatcher [15] - Opened new DbCommand, open DbCommands: 1 
+DEBUG 25-10-2020 20:24:59 NHibernate.AdoNet.AbstractBatcher [15] - Building an DbCommand object for the SqlString: INSERT INTO teacher (timestamp, actor, name, birthDate, address, lastAcad, isDeleted) VALUES (?, ?, ?, ?, ?, ?, ?); select SCOPE_IDENTITY() 
+DEBUG 25-10-2020 20:24:59 NHibernate.Persister.Entity.AbstractEntityPersister [15] - Dehydrating entity: [Admin.Repository.Models.TeacherModel#<null>] 
+DEBUG 25-10-2020 20:24:59 NHibernate.Type.DateTimeType [15] - binding '10/25/2020 8:24:59 PM' to parameter: 0 
+DEBUG 25-10-2020 20:24:59 NHibernate.Type.StringType [15] - binding null to parameter: 1 
+DEBUG 25-10-2020 20:24:59 NHibernate.Type.StringType [15] - binding 'risma sudarsono' to parameter: 2 
+DEBUG 25-10-2020 20:24:59 NHibernate.Type.StringType [15] - binding '12 juli 2002' to parameter: 3 
+DEBUG 25-10-2020 20:24:59 NHibernate.Type.StringType [15] - binding 'cilacap' to parameter: 4 
+DEBUG 25-10-2020 20:24:59 NHibernate.Type.StringType [15] - binding 'univ nganggur' to parameter: 5 
+DEBUG 25-10-2020 20:24:59 NHibernate.Type.BooleanType [15] - binding 'True' to parameter: 6 
+DEBUG 25-10-2020 20:24:59 NHibernate.SQL [15] - 
+    INSERT 
+    INTO
+        teacher
+        (timestamp, actor, name, birthDate, address, lastAcad, isDeleted) 
+    VALUES
+        (@p0, @p1, @p2, @p3, @p4, @p5, @p6);
+    select
+        SCOPE_IDENTITY();
+    @p0 = 2020-10-25T20:24:59.0568169+07:00 [Type: DateTime2 (8:0:0)],
+    @p1 = NULL [Type: String (4000:0:0)],
+    @p2 = 'risma sudarsono' [Type: String (4000:0:0)],
+    @p3 = '12 juli 2002' [Type: String (4000:0:0)],
+    @p4 = 'cilacap' [Type: String (4000:0:0)],
+    @p5 = 'univ nganggur' [Type: String (4000:0:0)],
+    @p6 = True [Type: Boolean (0:0:0)] 
+DEBUG 25-10-2020 20:24:59 NHibernate.Transaction.AdoTransaction [15] - Enlist Command 
+DEBUG 25-10-2020 20:24:59 NHibernate.AdoNet.AbstractBatcher [15] - ExecuteReader took 1 ms 
+DEBUG 25-10-2020 20:24:59 NHibernate.AdoNet.AbstractBatcher [15] - Opened DbDataReader, open DbDataReaders: 1 
+DEBUG 25-10-2020 20:24:59 NHibernate.Type.Int32Type [15] - returning '2' as column:  
+DEBUG 25-10-2020 20:24:59 NHibernate.Id.IdentifierGeneratorFactory [15] - Natively generated identity: 2 
+DEBUG 25-10-2020 20:24:59 NHibernate.AdoNet.AbstractBatcher [15] - Closed DbDataReader, open DbDataReaders :0 
+DEBUG 25-10-2020 20:24:59 NHibernate.AdoNet.AbstractBatcher [15] - DataReader was closed after 1 ms 
+DEBUG 25-10-2020 20:24:59 NHibernate.AdoNet.AbstractBatcher [15] - Closed DbCommand, open DbCommands: 0 
+DEBUG 25-10-2020 20:24:59 NHibernate.Transaction.AdoTransaction [15] - Start Commit 
+DEBUG 25-10-2020 20:24:59 NHibernate.Impl.SessionImpl [15] - before transaction completion 
+DEBUG 25-10-2020 20:24:59 NHibernate.Event.Default.AbstractFlushingEventListener [15] - flushing session 
+DEBUG 25-10-2020 20:24:59 NHibernate.Event.Default.AbstractFlushingEventListener [15] - processing flush-time cascades 
+DEBUG 25-10-2020 20:24:59 NHibernate.Event.Default.AbstractFlushingEventListener [15] - dirty checking collections 
+DEBUG 25-10-2020 20:24:59 NHibernate.Event.Default.AbstractFlushingEventListener [15] - Flushing entities and processing referenced collections 
+DEBUG 25-10-2020 20:24:59 NHibernate.Event.Default.AbstractFlushingEventListener [15] - Processing unreferenced collections 
+DEBUG 25-10-2020 20:24:59 NHibernate.Event.Default.AbstractFlushingEventListener [15] - Scheduling collection removes/(re)creates/updates 
+DEBUG 25-10-2020 20:24:59 NHibernate.Event.Default.AbstractFlushingEventListener [15] - Flushed: 0 insertions, 0 updates, 0 deletions to 1 objects 
+DEBUG 25-10-2020 20:24:59 NHibernate.Event.Default.AbstractFlushingEventListener [15] - Flushed: 0 (re)creations, 0 updates, 0 removals to 0 collections 
+DEBUG 25-10-2020 20:24:59 NHibernate.Impl.Printer [15] - listing entities: 
+DEBUG 25-10-2020 20:24:59 NHibernate.Impl.Printer [15] - Admin.Repository.Models.TeacherModel{'Id'='2', 'Timestamp'='10/25/2020 8:24:59 PM', 'Actor'=null, 'name'='risma sudarsono', 'birthDate'='12 juli 2002', 'address'='cilacap', 'lastAcad'='univ nganggur', 'isDeleted'='True'} 
+DEBUG 25-10-2020 20:24:59 NHibernate.Event.Default.AbstractFlushingEventListener [15] - executing flush 
+DEBUG 25-10-2020 20:24:59 NHibernate.AdoNet.ConnectionManager [15] - Registering flush begin 
+DEBUG 25-10-2020 20:24:59 NHibernate.AdoNet.ConnectionManager [15] - Registering flush end 
+DEBUG 25-10-2020 20:24:59 NHibernate.Event.Default.AbstractFlushingEventListener [15] - post flush 
+DEBUG 25-10-2020 20:24:59 NHibernate.Transaction.AdoTransaction [15] - DbTransaction Committed 
+DEBUG 25-10-2020 20:24:59 NHibernate.AdoNet.ConnectionManager [15] - Aggressively releasing database connection 
+DEBUG 25-10-2020 20:24:59 NHibernate.Connection.ConnectionProvider [15] - Closing connection 
+DEBUG 25-10-2020 20:24:59 NHibernate.Impl.SessionImpl [15] - transaction completion 
+DEBUG 25-10-2020 20:24:59 NHibernate.Transaction.AdoTransaction [15] - DbTransaction disposed. 
+DEBUG 25-10-2020 20:24:59 NHibernate.Impl.SessionImpl [15] - closing session 
+DEBUG 25-10-2020 20:24:59 NHibernate.AdoNet.AbstractBatcher [15] - running BatcherImpl.Dispose(true) 
+INFO  25-10-2020 20:24:59 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [15] - Executed action method Admin.Api.AspNetCore.Controller.TeacherController.UpdateTeacher (Admin.Api.AspNetCore), returned result Microsoft.AspNetCore.Mvc.OkResult in 536.5983ms. 
+INFO  25-10-2020 20:24:59 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [15] - Executed action method Admin.Api.AspNetCore.Controller.TeacherController.UpdateTeacher (Admin.Api.AspNetCore), returned result Microsoft.AspNetCore.Mvc.OkResult in 536.5983ms. 
+INFO  25-10-2020 20:24:59 Microsoft.AspNetCore.Mvc.StatusCodeResult [15] - Executing HttpStatusCodeResult, setting HTTP status code 200 
+INFO  25-10-2020 20:24:59 Microsoft.AspNetCore.Mvc.StatusCodeResult [15] - Executing HttpStatusCodeResult, setting HTTP status code 200 
+INFO  25-10-2020 20:24:59 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [15] - Executed action Admin.Api.AspNetCore.Controller.TeacherController.UpdateTeacher (Admin.Api.AspNetCore) in 558.1367ms 
+INFO  25-10-2020 20:24:59 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [15] - Executed action Admin.Api.AspNetCore.Controller.TeacherController.UpdateTeacher (Admin.Api.AspNetCore) in 558.1367ms 
+INFO  25-10-2020 20:24:59 Microsoft.AspNetCore.Hosting.Internal.WebHost [15] - Request finished in 599.2598ms 200  
+INFO  25-10-2020 20:24:59 Microsoft.AspNetCore.Hosting.Internal.WebHost [15] - Request finished in 599.2598ms 200  
+INFO  25-10-2020 20:25:16 Microsoft.AspNetCore.Hosting.Internal.WebHost [59] - Request starting HTTP/1.1 DELETE https://localhost:5091/Teacher/1   
+INFO  25-10-2020 20:25:16 Microsoft.AspNetCore.Hosting.Internal.WebHost [59] - Request starting HTTP/1.1 DELETE https://localhost:5091/Teacher/1   
+WARN  25-10-2020 20:25:16 Microsoft.AspNetCore.Cors.Infrastructure.CorsService [59] - The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the policy by listing individual origins if credentials needs to be supported. 
+WARN  25-10-2020 20:25:16 Microsoft.AspNetCore.Cors.Infrastructure.CorsService [59] - The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the policy by listing individual origins if credentials needs to be supported. 
+INFO  25-10-2020 20:25:16 Microsoft.AspNetCore.Cors.Infrastructure.CorsService [59] - CORS policy execution successful. 
+INFO  25-10-2020 20:25:16 Microsoft.AspNetCore.Cors.Infrastructure.CorsService [59] - CORS policy execution successful. 
+INFO  25-10-2020 20:25:16 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [59] - Route matched with {action = "DeleteTeacher", controller = "Teacher"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult DeleteTeacher(Int32) on controller Admin.Api.AspNetCore.Controller.TeacherController (Admin.Api.AspNetCore). 
+INFO  25-10-2020 20:25:16 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [59] - Route matched with {action = "DeleteTeacher", controller = "Teacher"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult DeleteTeacher(Int32) on controller Admin.Api.AspNetCore.Controller.TeacherController (Admin.Api.AspNetCore). 
+INFO  25-10-2020 20:25:16 QSI.Web.Middleware.LogActionFilter [59] - Receive DeleteTeacher on Teacher by Anonymous from ::1 
+INFO  25-10-2020 20:25:16 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [59] - Executing action method Admin.Api.AspNetCore.Controller.TeacherController.DeleteTeacher (Admin.Api.AspNetCore) - Validation state: Valid 
+INFO  25-10-2020 20:25:16 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [59] - Executing action method Admin.Api.AspNetCore.Controller.TeacherController.DeleteTeacher (Admin.Api.AspNetCore) - Validation state: Valid 
+DEBUG 25-10-2020 20:25:16 NHibernate.Impl.SessionFactoryImpl+SessionBuilderImpl`1[[NHibernate.ISessionBuilder, NHibernate, Version=5.1.0.0, Culture=neutral, PublicKeyToken=aa95f207798dfdb4]] [59] - Opening Hibernate Session. 
+DEBUG 25-10-2020 20:25:16 NHibernate.Impl.SessionImpl [59] - [session-id=95efa591-b149-452e-a342-4c4af6b4b102] opened session at timestamp: 637392543164, for session factory: [/e41fe0536e0044fe97b1c6ea84728e8b] 
+DEBUG 25-10-2020 20:25:16 NHibernate.Transaction.AdoTransaction [59] - Begin (Unspecified) 
+DEBUG 25-10-2020 20:25:16 NHibernate.Connection.DriverConnectionProvider [59] - Obtaining DbConnection from Driver 
+DEBUG 25-10-2020 20:25:16 NHibernate.Loader.Criteria.CriteriaQueryTranslator [59] - put criteria=Id = 1 alias=this0_ 
+DEBUG 25-10-2020 20:25:16 NHibernate.Loader.Criteria.CriteriaQueryTranslator [59] - returning alias=this_ for criteria=Id = 1 
+DEBUG 25-10-2020 20:25:16 NHibernate.AdoNet.AbstractBatcher [59] - Opened new DbCommand, open DbCommands: 1 
+DEBUG 25-10-2020 20:25:16 NHibernate.AdoNet.AbstractBatcher [59] - Building an DbCommand object for the SqlString: SELECT this_.Id as id1_2_0_, this_.timestamp as timestamp2_2_0_, this_.actor as actor3_2_0_, this_.name as name4_2_0_, this_.birthDate as birthdate5_2_0_, this_.address as address6_2_0_, this_.lastAcad as lastacad7_2_0_, this_.isDeleted as isdeleted8_2_0_ FROM teacher this_ WHERE this_.Id = ? 
+DEBUG 25-10-2020 20:25:16 NHibernate.Type.Int32Type [59] - binding '1' to parameter: 0 
+DEBUG 25-10-2020 20:25:16 NHibernate.SQL [59] - 
+    SELECT
+        this_.Id as id1_2_0_,
+        this_.timestamp as timestamp2_2_0_,
+        this_.actor as actor3_2_0_,
+        this_.name as name4_2_0_,
+        this_.birthDate as birthdate5_2_0_,
+        this_.address as address6_2_0_,
+        this_.lastAcad as lastacad7_2_0_,
+        this_.isDeleted as isdeleted8_2_0_ 
+    FROM
+        teacher this_ 
+    WHERE
+        this_.Id = @p0;
+    @p0 = 1 [Type: Int32 (0:0:0)] 
+DEBUG 25-10-2020 20:25:16 NHibernate.Transaction.AdoTransaction [59] - Enlist Command 
+DEBUG 25-10-2020 20:25:16 NHibernate.AdoNet.AbstractBatcher [59] - ExecuteReader took 0 ms 
+DEBUG 25-10-2020 20:25:16 NHibernate.AdoNet.AbstractBatcher [59] - Opened DbDataReader, open DbDataReaders: 1 
+DEBUG 25-10-2020 20:25:16 NHibernate.Loader.Loader [59] - processing result set 
+DEBUG 25-10-2020 20:25:16 NHibernate.Loader.Loader [59] - done processing result set (0 rows) 
+DEBUG 25-10-2020 20:25:16 NHibernate.AdoNet.AbstractBatcher [59] - Closed DbDataReader, open DbDataReaders :0 
+DEBUG 25-10-2020 20:25:16 NHibernate.AdoNet.AbstractBatcher [59] - DataReader was closed after 0 ms 
+DEBUG 25-10-2020 20:25:16 NHibernate.AdoNet.AbstractBatcher [59] - Closed DbCommand, open DbCommands: 0 
+DEBUG 25-10-2020 20:25:16 NHibernate.Loader.Loader [59] - total objects hydrated: 0 
+DEBUG 25-10-2020 20:25:16 NHibernate.Engine.StatefulPersistenceContext [59] - initializing non-lazy collections 
+DEBUG 25-10-2020 20:25:16 NHibernate.Transaction.AdoTransaction [59] - Start Commit 
+DEBUG 25-10-2020 20:25:16 NHibernate.Impl.SessionImpl [59] - before transaction completion 
+DEBUG 25-10-2020 20:25:16 NHibernate.Transaction.AdoTransaction [59] - DbTransaction Committed 
+DEBUG 25-10-2020 20:25:16 NHibernate.AdoNet.ConnectionManager [59] - Aggressively releasing database connection 
+DEBUG 25-10-2020 20:25:16 NHibernate.Connection.ConnectionProvider [59] - Closing connection 
+DEBUG 25-10-2020 20:25:16 NHibernate.Impl.SessionImpl [59] - transaction completion 
+DEBUG 25-10-2020 20:25:16 NHibernate.Transaction.AdoTransaction [59] - DbTransaction disposed. 
+DEBUG 25-10-2020 20:25:16 NHibernate.Impl.SessionImpl [59] - closing session 
+DEBUG 25-10-2020 20:25:16 NHibernate.AdoNet.AbstractBatcher [59] - running BatcherImpl.Dispose(true) 
+INFO  25-10-2020 20:26:15 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [59] - Executed action Admin.Api.AspNetCore.Controller.TeacherController.DeleteTeacher (Admin.Api.AspNetCore) in 58563.5445ms 
+INFO  25-10-2020 20:26:15 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [59] - Executed action Admin.Api.AspNetCore.Controller.TeacherController.DeleteTeacher (Admin.Api.AspNetCore) in 58563.5445ms 
+INFO  25-10-2020 20:26:15 Microsoft.AspNetCore.Hosting.Internal.WebHost [74] - Request starting HTTP/1.1 DELETE https://localhost:5091/Teacher/2   
+INFO  25-10-2020 20:26:15 Microsoft.AspNetCore.Hosting.Internal.WebHost [74] - Request starting HTTP/1.1 DELETE https://localhost:5091/Teacher/2   
+WARN  25-10-2020 20:26:15 Microsoft.AspNetCore.Cors.Infrastructure.CorsService [74] - The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the policy by listing individual origins if credentials needs to be supported. 
+WARN  25-10-2020 20:26:15 Microsoft.AspNetCore.Cors.Infrastructure.CorsService [74] - The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the policy by listing individual origins if credentials needs to be supported. 
+INFO  25-10-2020 20:26:15 Microsoft.AspNetCore.Cors.Infrastructure.CorsService [74] - CORS policy execution successful. 
+INFO  25-10-2020 20:26:15 Microsoft.AspNetCore.Cors.Infrastructure.CorsService [74] - CORS policy execution successful. 
+INFO  25-10-2020 20:26:15 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [74] - Route matched with {action = "DeleteTeacher", controller = "Teacher"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult DeleteTeacher(Int32) on controller Admin.Api.AspNetCore.Controller.TeacherController (Admin.Api.AspNetCore). 
+INFO  25-10-2020 20:26:15 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [74] - Route matched with {action = "DeleteTeacher", controller = "Teacher"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult DeleteTeacher(Int32) on controller Admin.Api.AspNetCore.Controller.TeacherController (Admin.Api.AspNetCore). 
+INFO  25-10-2020 20:26:15 QSI.Web.Middleware.LogActionFilter [74] - Receive DeleteTeacher on Teacher by Anonymous from ::1 
+INFO  25-10-2020 20:26:15 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [74] - Executing action method Admin.Api.AspNetCore.Controller.TeacherController.DeleteTeacher (Admin.Api.AspNetCore) - Validation state: Valid 
+INFO  25-10-2020 20:26:15 Microsoft.AspNetCore.Hosting.Internal.WebHost [59] - Request finished in 58744.7103ms 500 application/json 
+INFO  25-10-2020 20:26:15 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [74] - Executing action method Admin.Api.AspNetCore.Controller.TeacherController.DeleteTeacher (Admin.Api.AspNetCore) - Validation state: Valid 
+DEBUG 25-10-2020 20:26:15 NHibernate.Impl.SessionFactoryImpl+SessionBuilderImpl`1[[NHibernate.ISessionBuilder, NHibernate, Version=5.1.0.0, Culture=neutral, PublicKeyToken=aa95f207798dfdb4]] [74] - Opening Hibernate Session. 
+DEBUG 25-10-2020 20:26:15 NHibernate.Impl.SessionImpl [74] - [session-id=319a027d-9496-4194-82c7-ba93d9fc9337] opened session at timestamp: 637392543751, for session factory: [/e41fe0536e0044fe97b1c6ea84728e8b] 
+DEBUG 25-10-2020 20:26:15 NHibernate.Transaction.AdoTransaction [74] - Begin (Unspecified) 
+INFO  25-10-2020 20:26:15 Microsoft.AspNetCore.Hosting.Internal.WebHost [59] - Request finished in 58744.7103ms 500 application/json 
+DEBUG 25-10-2020 20:26:15 NHibernate.Connection.DriverConnectionProvider [74] - Obtaining DbConnection from Driver 
+DEBUG 25-10-2020 20:26:15 NHibernate.Loader.Criteria.CriteriaQueryTranslator [74] - put criteria=Id = 2 alias=this0_ 
+DEBUG 25-10-2020 20:26:15 NHibernate.Loader.Criteria.CriteriaQueryTranslator [74] - returning alias=this_ for criteria=Id = 2 
+DEBUG 25-10-2020 20:26:15 NHibernate.AdoNet.AbstractBatcher [74] - Opened new DbCommand, open DbCommands: 1 
+DEBUG 25-10-2020 20:26:15 NHibernate.AdoNet.AbstractBatcher [74] - Building an DbCommand object for the SqlString: SELECT this_.Id as id1_2_0_, this_.timestamp as timestamp2_2_0_, this_.actor as actor3_2_0_, this_.name as name4_2_0_, this_.birthDate as birthdate5_2_0_, this_.address as address6_2_0_, this_.lastAcad as lastacad7_2_0_, this_.isDeleted as isdeleted8_2_0_ FROM teacher this_ WHERE this_.Id = ? 
+DEBUG 25-10-2020 20:26:15 NHibernate.Type.Int32Type [74] - binding '2' to parameter: 0 
+DEBUG 25-10-2020 20:26:15 NHibernate.SQL [74] - 
+    SELECT
+        this_.Id as id1_2_0_,
+        this_.timestamp as timestamp2_2_0_,
+        this_.actor as actor3_2_0_,
+        this_.name as name4_2_0_,
+        this_.birthDate as birthdate5_2_0_,
+        this_.address as address6_2_0_,
+        this_.lastAcad as lastacad7_2_0_,
+        this_.isDeleted as isdeleted8_2_0_ 
+    FROM
+        teacher this_ 
+    WHERE
+        this_.Id = @p0;
+    @p0 = 2 [Type: Int32 (0:0:0)] 
+DEBUG 25-10-2020 20:26:15 NHibernate.Transaction.AdoTransaction [74] - Enlist Command 
+DEBUG 25-10-2020 20:26:15 NHibernate.AdoNet.AbstractBatcher [74] - ExecuteReader took 0 ms 
+DEBUG 25-10-2020 20:26:15 NHibernate.AdoNet.AbstractBatcher [74] - Opened DbDataReader, open DbDataReaders: 1 
+DEBUG 25-10-2020 20:26:15 NHibernate.Loader.Loader [74] - processing result set 
+DEBUG 25-10-2020 20:26:15 NHibernate.Loader.Loader [74] - result set row: 0 
+DEBUG 25-10-2020 20:26:15 NHibernate.Type.Int32Type [74] - returning '2' as column: id1_2_0_ 
+DEBUG 25-10-2020 20:26:15 NHibernate.Loader.Loader [74] - result row: EntityKey[Admin.Repository.Models.TeacherModel#2] 
+DEBUG 25-10-2020 20:26:15 NHibernate.Loader.Loader [74] - Initializing object from DataReader: [Admin.Repository.Models.TeacherModel#2] 
+DEBUG 25-10-2020 20:26:15 NHibernate.Persister.Entity.AbstractEntityPersister [74] - Hydrating entity: [Admin.Repository.Models.TeacherModel#2] 
+DEBUG 25-10-2020 20:26:15 NHibernate.Type.DateTimeType [74] - returning '10/25/2020 8:24:59 PM' as column: timestamp2_2_0_ 
+DEBUG 25-10-2020 20:26:15 NHibernate.Type.StringType [74] - returning null as column: actor3_2_0_ 
+DEBUG 25-10-2020 20:26:15 NHibernate.Type.StringType [74] - returning 'risma sudarsono' as column: name4_2_0_ 
+DEBUG 25-10-2020 20:26:15 NHibernate.Type.StringType [74] - returning '12 juli 2002' as column: birthdate5_2_0_ 
+DEBUG 25-10-2020 20:26:15 NHibernate.Type.StringType [74] - returning 'cilacap' as column: address6_2_0_ 
+DEBUG 25-10-2020 20:26:15 NHibernate.Type.StringType [74] - returning 'univ nganggur' as column: lastacad7_2_0_ 
+DEBUG 25-10-2020 20:26:15 NHibernate.Type.BooleanType [74] - returning 'True' as column: isdeleted8_2_0_ 
+DEBUG 25-10-2020 20:26:15 NHibernate.Loader.Loader [74] - done processing result set (1 rows) 
+DEBUG 25-10-2020 20:26:15 NHibernate.AdoNet.AbstractBatcher [74] - Closed DbDataReader, open DbDataReaders :0 
+DEBUG 25-10-2020 20:26:15 NHibernate.AdoNet.AbstractBatcher [74] - DataReader was closed after 1 ms 
+DEBUG 25-10-2020 20:26:15 NHibernate.AdoNet.AbstractBatcher [74] - Closed DbCommand, open DbCommands: 0 
+DEBUG 25-10-2020 20:26:15 NHibernate.Loader.Loader [74] - total objects hydrated: 1 
+DEBUG 25-10-2020 20:26:15 NHibernate.Engine.TwoPhaseLoad [74] - resolving associations for [Admin.Repository.Models.TeacherModel#2] 
+DEBUG 25-10-2020 20:26:15 NHibernate.Engine.TwoPhaseLoad [74] - done materializing entity [Admin.Repository.Models.TeacherModel#2] 
+DEBUG 25-10-2020 20:26:15 NHibernate.Engine.StatefulPersistenceContext [74] - initializing non-lazy collections 
+DEBUG 25-10-2020 20:26:15 NHibernate.Transaction.AdoTransaction [74] - Start Commit 
+DEBUG 25-10-2020 20:26:15 NHibernate.Impl.SessionImpl [74] - before transaction completion 
+DEBUG 25-10-2020 20:26:15 NHibernate.Event.Default.AbstractFlushingEventListener [74] - flushing session 
+DEBUG 25-10-2020 20:26:15 NHibernate.Event.Default.AbstractFlushingEventListener [74] - processing flush-time cascades 
+DEBUG 25-10-2020 20:26:15 NHibernate.Event.Default.AbstractFlushingEventListener [74] - dirty checking collections 
+DEBUG 25-10-2020 20:26:15 NHibernate.Event.Default.AbstractFlushingEventListener [74] - Flushing entities and processing referenced collections 
+DEBUG 25-10-2020 20:26:15 NHibernate.Event.Default.AbstractFlushingEventListener [74] - Processing unreferenced collections 
+DEBUG 25-10-2020 20:26:15 NHibernate.Event.Default.AbstractFlushingEventListener [74] - Scheduling collection removes/(re)creates/updates 
+DEBUG 25-10-2020 20:26:15 NHibernate.Event.Default.AbstractFlushingEventListener [74] - Flushed: 0 insertions, 0 updates, 0 deletions to 1 objects 
+DEBUG 25-10-2020 20:26:15 NHibernate.Event.Default.AbstractFlushingEventListener [74] - Flushed: 0 (re)creations, 0 updates, 0 removals to 0 collections 
+DEBUG 25-10-2020 20:26:15 NHibernate.Impl.Printer [74] - listing entities: 
+DEBUG 25-10-2020 20:26:15 NHibernate.Impl.Printer [74] - Admin.Repository.Models.TeacherModel{'Id'='2', 'Timestamp'='10/25/2020 8:24:59 PM', 'Actor'=null, 'name'='risma sudarsono', 'birthDate'='12 juli 2002', 'address'='cilacap', 'lastAcad'='univ nganggur', 'isDeleted'='True'} 
+DEBUG 25-10-2020 20:26:15 NHibernate.Event.Default.AbstractFlushingEventListener [74] - executing flush 
+DEBUG 25-10-2020 20:26:15 NHibernate.AdoNet.ConnectionManager [74] - Registering flush begin 
+DEBUG 25-10-2020 20:26:15 NHibernate.AdoNet.ConnectionManager [74] - Registering flush end 
+DEBUG 25-10-2020 20:26:15 NHibernate.Event.Default.AbstractFlushingEventListener [74] - post flush 
+DEBUG 25-10-2020 20:26:15 NHibernate.Transaction.AdoTransaction [74] - DbTransaction Committed 
+DEBUG 25-10-2020 20:26:15 NHibernate.AdoNet.ConnectionManager [74] - Aggressively releasing database connection 
+DEBUG 25-10-2020 20:26:15 NHibernate.Connection.ConnectionProvider [74] - Closing connection 
+DEBUG 25-10-2020 20:26:15 NHibernate.Impl.SessionImpl [74] - transaction completion 
+DEBUG 25-10-2020 20:26:15 NHibernate.Transaction.AdoTransaction [74] - DbTransaction disposed. 
+DEBUG 25-10-2020 20:26:15 NHibernate.Impl.SessionImpl [74] - closing session 
+DEBUG 25-10-2020 20:26:15 NHibernate.AdoNet.AbstractBatcher [74] - running BatcherImpl.Dispose(true) 
+DEBUG 25-10-2020 20:26:15 NHibernate.Impl.SessionFactoryImpl+SessionBuilderImpl`1[[NHibernate.ISessionBuilder, NHibernate, Version=5.1.0.0, Culture=neutral, PublicKeyToken=aa95f207798dfdb4]] [74] - Opening Hibernate Session. 
+DEBUG 25-10-2020 20:26:15 NHibernate.Impl.SessionImpl [74] - [session-id=becd024e-595c-451b-9e44-8e67fc6c769b] opened session at timestamp: 637392543751, for session factory: [/e41fe0536e0044fe97b1c6ea84728e8b] 
+DEBUG 25-10-2020 20:26:15 NHibernate.Transaction.AdoTransaction [74] - Begin (Unspecified) 
+DEBUG 25-10-2020 20:26:15 NHibernate.Connection.DriverConnectionProvider [74] - Obtaining DbConnection from Driver 
+DEBUG 25-10-2020 20:26:15 NHibernate.Event.Default.DefaultLoadEventListener [74] - loading entity: [Admin.Repository.Models.TeacherModel#2] 
+DEBUG 25-10-2020 20:26:15 NHibernate.Event.Default.DefaultLoadEventListener [74] - creating new proxy for entity 
+DEBUG 25-10-2020 20:26:15 NHibernate.Impl.SessionImpl [74] - initializing proxy: [Admin.Repository.Models.TeacherModel#2] 
+DEBUG 25-10-2020 20:26:15 NHibernate.Event.Default.DefaultLoadEventListener [74] - attempting to resolve: [Admin.Repository.Models.TeacherModel#2] 
+DEBUG 25-10-2020 20:26:15 NHibernate.Event.Default.DefaultLoadEventListener [74] - object not resolved in any cache: [Admin.Repository.Models.TeacherModel#2] 
+DEBUG 25-10-2020 20:26:15 NHibernate.Persister.Entity.AbstractEntityPersister [74] - Fetching entity: [Admin.Repository.Models.TeacherModel#2] 
+DEBUG 25-10-2020 20:26:15 NHibernate.Loader.Loader [74] - loading entity: [Admin.Repository.Models.TeacherModel#2] 
+DEBUG 25-10-2020 20:26:15 NHibernate.AdoNet.AbstractBatcher [74] - Opened new DbCommand, open DbCommands: 1 
+DEBUG 25-10-2020 20:26:15 NHibernate.AdoNet.AbstractBatcher [74] - Building an DbCommand object for the SqlString: SELECT teachermod0_.Id as id1_2_0_, teachermod0_.timestamp as timestamp2_2_0_, teachermod0_.actor as actor3_2_0_, teachermod0_.name as name4_2_0_, teachermod0_.birthDate as birthdate5_2_0_, teachermod0_.address as address6_2_0_, teachermod0_.lastAcad as lastacad7_2_0_, teachermod0_.isDeleted as isdeleted8_2_0_ FROM teacher teachermod0_ WHERE teachermod0_.Id=? 
+DEBUG 25-10-2020 20:26:15 NHibernate.Type.Int32Type [74] - binding '2' to parameter: 0 
+DEBUG 25-10-2020 20:26:15 NHibernate.SQL [74] - 
+    SELECT
+        teachermod0_.Id as id1_2_0_,
+        teachermod0_.timestamp as timestamp2_2_0_,
+        teachermod0_.actor as actor3_2_0_,
+        teachermod0_.name as name4_2_0_,
+        teachermod0_.birthDate as birthdate5_2_0_,
+        teachermod0_.address as address6_2_0_,
+        teachermod0_.lastAcad as lastacad7_2_0_,
+        teachermod0_.isDeleted as isdeleted8_2_0_ 
+    FROM
+        teacher teachermod0_ 
+    WHERE
+        teachermod0_.Id=@p0;
+    @p0 = 2 [Type: Int32 (0:0:0)] 
+DEBUG 25-10-2020 20:26:15 NHibernate.Transaction.AdoTransaction [74] - Enlist Command 
+DEBUG 25-10-2020 20:26:15 NHibernate.AdoNet.AbstractBatcher [74] - ExecuteReader took 0 ms 
+DEBUG 25-10-2020 20:26:15 NHibernate.AdoNet.AbstractBatcher [74] - Opened DbDataReader, open DbDataReaders: 1 
+DEBUG 25-10-2020 20:26:15 NHibernate.Loader.Loader [74] - processing result set 
+DEBUG 25-10-2020 20:26:15 NHibernate.Loader.Loader [74] - result set row: 0 
+DEBUG 25-10-2020 20:26:15 NHibernate.Loader.Loader [74] - result row: EntityKey[Admin.Repository.Models.TeacherModel#2] 
+DEBUG 25-10-2020 20:26:15 NHibernate.Loader.Loader [74] - Initializing object from DataReader: [Admin.Repository.Models.TeacherModel#2] 
+DEBUG 25-10-2020 20:26:15 NHibernate.Persister.Entity.AbstractEntityPersister [74] - Hydrating entity: [Admin.Repository.Models.TeacherModel#2] 
+DEBUG 25-10-2020 20:26:15 NHibernate.Type.DateTimeType [74] - returning '10/25/2020 8:24:59 PM' as column: timestamp2_2_0_ 
+DEBUG 25-10-2020 20:26:15 NHibernate.Type.StringType [74] - returning null as column: actor3_2_0_ 
+DEBUG 25-10-2020 20:26:15 NHibernate.Type.StringType [74] - returning 'risma sudarsono' as column: name4_2_0_ 
+DEBUG 25-10-2020 20:26:15 NHibernate.Type.StringType [74] - returning '12 juli 2002' as column: birthdate5_2_0_ 
+DEBUG 25-10-2020 20:26:15 NHibernate.Type.StringType [74] - returning 'cilacap' as column: address6_2_0_ 
+DEBUG 25-10-2020 20:26:15 NHibernate.Type.StringType [74] - returning 'univ nganggur' as column: lastacad7_2_0_ 
+DEBUG 25-10-2020 20:26:15 NHibernate.Type.BooleanType [74] - returning 'True' as column: isdeleted8_2_0_ 
+DEBUG 25-10-2020 20:26:15 NHibernate.Loader.Loader [74] - done processing result set (1 rows) 
+DEBUG 25-10-2020 20:26:15 NHibernate.AdoNet.AbstractBatcher [74] - Closed DbDataReader, open DbDataReaders :0 
+DEBUG 25-10-2020 20:26:15 NHibernate.AdoNet.AbstractBatcher [74] - DataReader was closed after 1 ms 
+DEBUG 25-10-2020 20:26:15 NHibernate.AdoNet.AbstractBatcher [74] - Closed DbCommand, open DbCommands: 0 
+DEBUG 25-10-2020 20:26:15 NHibernate.Loader.Loader [74] - total objects hydrated: 1 
+DEBUG 25-10-2020 20:26:15 NHibernate.Engine.TwoPhaseLoad [74] - resolving associations for [Admin.Repository.Models.TeacherModel#2] 
+DEBUG 25-10-2020 20:26:15 NHibernate.Engine.TwoPhaseLoad [74] - done materializing entity [Admin.Repository.Models.TeacherModel#2] 
+DEBUG 25-10-2020 20:26:15 NHibernate.Engine.StatefulPersistenceContext [74] - initializing non-lazy collections 
+DEBUG 25-10-2020 20:26:15 NHibernate.Loader.Loader [74] - done entity load 
+DEBUG 25-10-2020 20:26:15 NHibernate.Event.Default.DefaultDeleteEventListener [74] - deleting a persistent instance 
+DEBUG 25-10-2020 20:26:15 NHibernate.Event.Default.DefaultDeleteEventListener [74] - deleting [Admin.Repository.Models.TeacherModel#2] 
+DEBUG 25-10-2020 20:26:15 NHibernate.Impl.SessionImpl [74] - setting cache mode to: Get 
+DEBUG 25-10-2020 20:26:15 NHibernate.Impl.SessionImpl [74] - setting cache mode to: Normal 
+DEBUG 25-10-2020 20:26:15 NHibernate.Impl.SessionImpl [74] - setting cache mode to: Get 
+DEBUG 25-10-2020 20:26:15 NHibernate.Impl.SessionImpl [74] - setting cache mode to: Normal 
+DEBUG 25-10-2020 20:26:15 NHibernate.Transaction.AdoTransaction [74] - Start Commit 
+DEBUG 25-10-2020 20:26:15 NHibernate.Impl.SessionImpl [74] - before transaction completion 
+DEBUG 25-10-2020 20:26:15 NHibernate.Event.Default.AbstractFlushingEventListener [74] - flushing session 
+DEBUG 25-10-2020 20:26:15 NHibernate.Event.Default.AbstractFlushingEventListener [74] - processing flush-time cascades 
+DEBUG 25-10-2020 20:26:15 NHibernate.Event.Default.AbstractFlushingEventListener [74] - dirty checking collections 
+DEBUG 25-10-2020 20:26:15 NHibernate.Event.Default.AbstractFlushingEventListener [74] - Flushing entities and processing referenced collections 
+DEBUG 25-10-2020 20:26:15 NHibernate.Event.Default.AbstractFlushingEventListener [74] - Processing unreferenced collections 
+DEBUG 25-10-2020 20:26:15 NHibernate.Event.Default.AbstractFlushingEventListener [74] - Scheduling collection removes/(re)creates/updates 
+DEBUG 25-10-2020 20:26:15 NHibernate.Event.Default.AbstractFlushingEventListener [74] - Flushed: 0 insertions, 0 updates, 1 deletions to 1 objects 
+DEBUG 25-10-2020 20:26:15 NHibernate.Event.Default.AbstractFlushingEventListener [74] - Flushed: 0 (re)creations, 0 updates, 0 removals to 0 collections 
+DEBUG 25-10-2020 20:26:15 NHibernate.Impl.Printer [74] - listing entities: 
+DEBUG 25-10-2020 20:26:15 NHibernate.Impl.Printer [74] - Admin.Repository.Models.TeacherModel{'Id'='2', 'Timestamp'='10/25/2020 8:24:59 PM', 'Actor'=null, 'name'='risma sudarsono', 'birthDate'='12 juli 2002', 'address'='cilacap', 'lastAcad'='univ nganggur', 'isDeleted'='True'} 
+DEBUG 25-10-2020 20:26:15 NHibernate.Event.Default.AbstractFlushingEventListener [74] - executing flush 
+DEBUG 25-10-2020 20:26:15 NHibernate.AdoNet.ConnectionManager [74] - Registering flush begin 
+DEBUG 25-10-2020 20:26:15 NHibernate.Persister.Entity.AbstractEntityPersister [74] - Deleting entity: [Admin.Repository.Models.TeacherModel#2] 
+DEBUG 25-10-2020 20:26:15 NHibernate.AdoNet.AbstractBatcher [74] - Opened new DbCommand, open DbCommands: 1 
+DEBUG 25-10-2020 20:26:15 NHibernate.AdoNet.AbstractBatcher [74] - Building an DbCommand object for the SqlString: DELETE FROM teacher WHERE Id = ? 
+DEBUG 25-10-2020 20:26:15 NHibernate.Type.Int32Type [74] - binding '2' to parameter: 0 
+DEBUG 25-10-2020 20:26:15 NHibernate.AdoNet.AbstractBatcher [74] - Adding to batch:
+    DELETE 
+    FROM
+        teacher 
+    WHERE
+        Id = @p0;
+    @p0 = 2 [Type: Int32 (0:0:0)] 
+DEBUG 25-10-2020 20:26:15 NHibernate.AdoNet.AbstractBatcher [74] - Executing batch 
+DEBUG 25-10-2020 20:26:15 NHibernate.SQL [74] - Batch commands:
+command 0:
+    DELETE 
+    FROM
+        teacher 
+    WHERE
+        Id = @p0;
+    @p0 = 2 [Type: Int32 (0:0:0)]
+ 
+DEBUG 25-10-2020 20:26:15 NHibernate.Transaction.AdoTransaction [74] - Enlist Command 
+DEBUG 25-10-2020 20:26:15 NHibernate.AdoNet.AbstractBatcher [74] - ExecuteBatch for 1 statements took 1 ms 
+DEBUG 25-10-2020 20:26:15 NHibernate.AdoNet.AbstractBatcher [74] - Closed DbCommand, open DbCommands: 0 
+DEBUG 25-10-2020 20:26:15 NHibernate.AdoNet.ConnectionManager [74] - Registering flush end 
+DEBUG 25-10-2020 20:26:15 NHibernate.Event.Default.AbstractFlushingEventListener [74] - post flush 
+DEBUG 25-10-2020 20:26:15 NHibernate.Transaction.AdoTransaction [74] - DbTransaction Committed 
+DEBUG 25-10-2020 20:26:15 NHibernate.AdoNet.ConnectionManager [74] - Aggressively releasing database connection 
+DEBUG 25-10-2020 20:26:15 NHibernate.Connection.ConnectionProvider [74] - Closing connection 
+DEBUG 25-10-2020 20:26:15 NHibernate.Impl.SessionImpl [74] - transaction completion 
+DEBUG 25-10-2020 20:26:15 NHibernate.Transaction.AdoTransaction [74] - DbTransaction disposed. 
+DEBUG 25-10-2020 20:26:15 NHibernate.Impl.SessionImpl [74] - closing session 
+DEBUG 25-10-2020 20:26:15 NHibernate.AdoNet.AbstractBatcher [74] - running BatcherImpl.Dispose(true) 
+INFO  25-10-2020 20:26:15 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [74] - Executed action method Admin.Api.AspNetCore.Controller.TeacherController.DeleteTeacher (Admin.Api.AspNetCore), returned result Microsoft.AspNetCore.Mvc.OkResult in 89.6741ms. 
+INFO  25-10-2020 20:26:15 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [74] - Executed action method Admin.Api.AspNetCore.Controller.TeacherController.DeleteTeacher (Admin.Api.AspNetCore), returned result Microsoft.AspNetCore.Mvc.OkResult in 89.6741ms. 
+INFO  25-10-2020 20:26:15 Microsoft.AspNetCore.Mvc.StatusCodeResult [74] - Executing HttpStatusCodeResult, setting HTTP status code 200 
+INFO  25-10-2020 20:26:15 Microsoft.AspNetCore.Mvc.StatusCodeResult [74] - Executing HttpStatusCodeResult, setting HTTP status code 200 
+INFO  25-10-2020 20:26:15 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [74] - Executed action Admin.Api.AspNetCore.Controller.TeacherController.DeleteTeacher (Admin.Api.AspNetCore) in 117.3805ms 
+INFO  25-10-2020 20:26:15 Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker [74] - Executed action Admin.Api.AspNetCore.Controller.TeacherController.DeleteTeacher (Admin.Api.AspNetCore) in 117.3805ms 
+INFO  25-10-2020 20:26:15 Microsoft.AspNetCore.Hosting.Internal.WebHost [74] - Request finished in 234.7358ms 200  
+INFO  25-10-2020 20:26:15 Microsoft.AspNetCore.Hosting.Internal.WebHost [74] - Request finished in 234.7358ms 200  
+DEBUG 25-10-2020 20:46:17 NHibernate.Impl.SessionImpl [2] - [session-id=5bcd7dad-ac70-4286-b76f-4837b2a65687] executing real Dispose(False) 
+DEBUG 25-10-2020 20:46:17 NHibernate.Impl.SessionImpl [2] - [session-id=95efa591-b149-452e-a342-4c4af6b4b102] executing real Dispose(False) 
+DEBUG 25-10-2020 20:46:17 NHibernate.Impl.SessionImpl [2] - [session-id=becd024e-595c-451b-9e44-8e67fc6c769b] executing real Dispose(False) 
+DEBUG 25-10-2020 20:46:17 NHibernate.Impl.SessionImpl [2] - [session-id=319a027d-9496-4194-82c7-ba93d9fc9337] executing real Dispose(False) 
+DEBUG 25-10-2020 20:46:17 NHibernate.Impl.SessionImpl [2] - [session-id=3f71a258-f052-435a-a529-c0d6a351a28a] executing real Dispose(False) 
+DEBUG 25-10-2020 20:46:17 NHibernate.Impl.SessionImpl [2] - [session-id=72bac3e5-6e72-46ad-9edd-3589746dd0da] executing real Dispose(False) 
+DEBUG 25-10-2020 20:46:17 NHibernate.Impl.SessionImpl [2] - [session-id=15b056f8-a6bb-4839-8fbc-18cb02fcdd97] executing real Dispose(False) 

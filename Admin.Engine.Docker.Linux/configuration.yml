@@ -1,0 +1,49 @@
+orm:
+  connection:
+    databaseType: MSSQL2012
+    connectionString: ""
+  helper:
+    showSql: true
+    formatSql: true
+  build:
+    create: false
+    update: false
+    scriptPath: SqlScript
+    scriptFileName: build.sql
+  map:
+    assemblies:
+      - Admin.Repository.NHibernate
+#    classes:
+swagger:
+  generator:
+    doc: 
+      name: v1
+      info:
+        title: Admin
+        version: v1
+    describeAllEnumsAsStrings: true
+  route: 
+    template: 'api/docs/{documentName}/swagger.json'
+  ui:
+    prefix: api/docs
+    documentTitle: Admin
+    endpoint:
+      url: ./v1/swagger.json
+      name: Admin V1
+
+#masstransit:
+#  masstransitConfiguration:
+#    baseUrl: rabbitmq://localhost:5672/project_vhost
+#    username: user
+#    password: password
+#    endpoints:
+#      - queueName: QSI.DeveloperTest.Inventory-service
+#        messageRetry: 
+#          retryCount: 1
+#          retryInterval: 5000
+#        consumers:
+#          - type: QSI.DeveloperTest.Inventory.MassTransit.Consumers.ApplicationSubmittedEventConsumer
+#            assembly: QSI.DeveloperTest.Inventory.MassTransit
+#          - type: QSI.DeveloperTest.Inventory.MassTransit.Consumers.SubmissionResultConsumer
+#            assembly: QSI.DeveloperTest.Inventory.MassTransit
+#  messageBroker: RabbitMQ
